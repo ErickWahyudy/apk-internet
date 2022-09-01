@@ -129,7 +129,7 @@ function get_client_browser() {
  	<meta name="author" content="KASSANDRA, KASSANDRA HD PRODUCTION">
     <meta content='index,follow' name='robots'/>
 	<title>KASSANDRA WIFI</title>
-	<link rel="icon" href="dist/img/komp.png">
+	<link rel="shortcut icon" href="dist/img/favicon.ico" type="image/x-icon">
 	<!-- Tell the browser to be responsive to screen width -->
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<!-- Bootstrap 3.3.6 -->
@@ -147,7 +147,6 @@ function get_client_browser() {
 	<!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
 	<link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
-	<link rel="shortcut icon" href="../dist/img/favicon.ico" type="image/x-icon">
 
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>

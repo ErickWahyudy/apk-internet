@@ -15,7 +15,7 @@ include "inc/koneksi.php";
  	<meta name="author" content="KASSANDRA, KASSANDRA HD PRODUCTION">
     <meta content='index,follow' name='robots'/>
 	<title>Aplikasi KASSANDRA WIFI</title>
-	<link rel="icon" href="dist/img/baca.png">
+	<link rel="shortcut icon" href="dist/img/favicon.ico" type="image/x-icon">
 	<!-- Tell the browser to be responsive to screen width -->
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<!-- Bootstrap 3.3.6 -->
@@ -26,7 +26,6 @@ include "inc/koneksi.php";
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 	<!-- Theme style -->
 	<link rel="stylesheet" href="dist/css/AdminLTE.min.css">
-	<link rel="shortcut icon" href="../dist/img/favicon.ico" type="image/x-icon">
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

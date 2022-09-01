@@ -15,7 +15,7 @@
     <meta content='index,follow' name='robots'/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Register KASSANDRA WIFI</title>
-	<link rel="icon" href="dist/img/komp.png">
+	<link rel="shortcut icon" href="dist/img/favicon.ico" type="image/x-icon">
 	<!-- Tell the browser to be responsive to screen width -->
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 	<!-- Bootstrap 3.3.6 -->
@@ -33,7 +33,7 @@
 	<!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
 	<link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
-	<link rel="shortcut icon" href="../dist/img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="dist/css/custom.bootstrapiklan.min.css">
 
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
