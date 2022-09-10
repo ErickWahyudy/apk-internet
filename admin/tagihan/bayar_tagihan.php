@@ -41,15 +41,15 @@
     
         foreach ($result as $key => $data) { //mengirim email untuk setiap baris data
             $mail =  new PHPMailer\PHPMailer\PHPMailer();
-            $mail->IsSMTP();
+           //$mail->IsSMTP();
             $mail->IsHTML(true);
-            $mail->SMTPAuth     = true;
-            $mail->Host         = "smtp.gmail.com";
-            $mail->Port         = 587;
-            $mail->SMTPSecure   = "tls";
-            $mail->Username     = "kassandramikrotik@gmail.com";   //username SMTP
-            $mail->Password     = "abzdjiivohwzwieo";                 //password SMTP
-            $mail->From         = "kassandramikrotik@gmail.com";   //email pengirim
+            //$mail->SMTPAuth     = true;
+            //$mail->Host         = "smtp.gmail.com";
+            //$mail->Port         = 587;
+            //$mail->SMTPSecure   = "tls";
+            //$mail->Username     = "kassandramikrotik@gmail.com";       //username SMTP
+            //$mail->Password     = "abzdjiivohwzwieo";                  //password SMTPSecure
+            $mail->From         = "wifi@kassandra.my.id";   //email pengirim
             $mail->FromName     = "KASSANDRA WiFi";                   //nama  pengirim
             $mail->AddAddress($data['email'], $data['nama']);//email dan nama penerima
             $mail->Subject  	=  "Terima Kasih Sdr/i " .$data['nama'] . " Sudah Melakukan Pembayaran Tagihan KassandraWiFi Untuk Bulan ".$data['bulan'] . " / " .$data['tahun'] ; //judul email
