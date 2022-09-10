@@ -104,13 +104,8 @@
 								Pembayaran dapat dilakukan secara Tunai maupun transfer Bank, ShopeePay, LinkAja, OVO, Alfamart, Indomaret atau platform digital lainnya. Untuk link pembayaran via transfer kami kirimkan jika anda memintanya atau juga bisa dilihat di aplikasi KassandraWiFi. %0A
 								_Abaikan pesan jika sudah melakukan pembayaran.%20
 								Terima kasih._%0A%0A
-								Berikut kami sampaikan juga link penting mengenai layanan informasi dari KassandraWiFi.%0A
-								Link login aplikasi tagihan KassandraWiFi %0A
-								https://wifi.kassandra.my.id %0A
-								Link lapor jika terjadi gangguan wifi anda %0A
-								https://wifi.kassandra.my.id/lapor %0A
-								Link untuk memberikan masukan layanan wifi kami %0A
-								https://wifi.kassandra.my.id/feedback %0A%0A
+								Berikut kami sampaikan juga link pembayaran via transfer.%0A
+								https://wifi.kassandra.my.id/pelanggan/tagihan_plg.php?id_tagihan=<?php echo $data['id_tagihan']; ?>  %0A%0A
 								
 								_Pesan ini dikirim otomatis oleh system aplikasi KassandraWiFi._%0A
 								-wifi@kassandra.my.id-"

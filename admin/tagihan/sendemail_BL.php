@@ -104,7 +104,7 @@ foreach ($result as $key => $data) { //mengirim email untuk setiap baris data
                                 </a>
 
                                 <a>
-                                <img src=https://wifi.kassandra.my.id/dist/img/ovo.png height=25px>
+                                <img src=https://wifi.kassandra.my.id/dist/img/dana.png height=35px>
                                 </a>
 
                                 <a>

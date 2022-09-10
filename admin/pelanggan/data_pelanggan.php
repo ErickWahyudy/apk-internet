@@ -13,6 +13,8 @@
 		<div class="box-header with-border">
 			<a href="?page=add-pelanggan" title="Tambah Data" class="btn btn-primary">
 				<i class="glyphicon glyphicon-plus"></i> TAMBAH PELANGGAN</a>
+				<a href="https://docs.google.com/spreadsheets/d/1y0-1HHY3ZVqvulj2Hgg42wN-VkUeCjygwx6EJvDQBFM/edit#gid=778747165" title="Tambah Data" class="btn btn-success" target="blank">
+				<i class="glyphicon glyphicon"></i> DATA GOOGLESHEET</a>
 			<div class="box-tools pull-right">
 				<button type="button" class="btn btn-box-tool" data-widget="collapse">
 					<i class="fa fa-minus"></i>

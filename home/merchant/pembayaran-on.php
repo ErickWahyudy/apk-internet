@@ -25,8 +25,8 @@
 								<img src="../../dist/img/shopeepay.png" alt="" style="height:30px">
 							<a href="https://linkaja.onelink.me/Mk5Y/app" lass="btn btn"> 
 								<img src="../../dist/img/linkaja.png" alt="" style="height:45px">
-						    <a href="https://ovo.id" lass="btn btn"> &emsp;
-								<img src="../../dist/img/ovo.png" alt="" style="height:35px">
+						    <a href="https://link.dana.id/lBx7Kcflieb" lass="btn btn"> &emsp;
+								<img src="../../dist/img/dana.png" alt="" style="height:45px">
 							<a href="../../uploadfile/Linkpembayaran.txt" class="btn btn" target="blank">
 								<img src="../../dist/img/alfamart.png" alt="" style="height:40px">
 							</a>
