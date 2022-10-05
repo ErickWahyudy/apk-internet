@@ -75,7 +75,7 @@ include "inc/koneksi.php";
 						<p>Lupa Akun / Lainnya ? Klik <a href="lapor.php"><u>LAPOR</u></a> admin..</p>
 						<br>
 						<center>
-							<strong>Copyright &copy; 2019 - 2022
+							<strong>Copyright &copy; 2019 - <?php echo date('Y'); ?>
 							<a href="https://bit.ly/kassandrahdproduction" target="blank">KassandraWifi</a>.</strong> All rights reserved.
 						</center><br>
 						<a href="login.php" title="Halaman Adminintrator" class="btn btn-default btn-sm">

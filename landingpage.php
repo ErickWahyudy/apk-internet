@@ -9,6 +9,8 @@
     <meta name="description" content="Layanan hotspot wifi unlimited 24 jam non stop tanpa lemot kecuali saat wifi down">
  	<meta name="author" content="KASSANDRA, KASSANDRA HD PRODUCTION">
     <meta content='index,follow' name='robots'/>
+    
+    <link rel="manifest" href="/static/manifest.json"/>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="../kassandra-wifi/dist/img/favicon.ico" type="image/x-icon">
@@ -37,10 +39,10 @@
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
         <i class="fa fa-wifi fa-2x text-primary position-absolute top-50 start-50 translate-middle"></i>
-    </div>
+    </div> -->
     <!-- Spinner End -->
 
 

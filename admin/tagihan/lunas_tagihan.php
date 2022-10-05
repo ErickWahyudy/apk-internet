@@ -1,3 +1,23 @@
+<?php
+$kode_bulan = date("m");
+$kode_tahun = date("Y");
+
+// perintah tampil data totel pendapatan
+$sql = $koneksi->query("SELECT sum(tagihan) as tagihan from tb_tagihan where status='LS' and bulan='$kode_bulan' and tahun='$kode_tahun'");
+     
+$total = 0;
+$tot_bayar = 0;
+$no = 1;
+
+while ($data= $sql->fetch_assoc()) {
+ // total adalah hasil dari harga x qty
+ $total = $data['tagihan'];
+ // total bayar adalah penjumlahan dari keseluruhan total
+ $tot_bayar += $total;
+}
+
+?>
+
 <section class="content-header">
 	<h1 class="fa fa-money">
 		Data Pembayaran |
@@ -9,6 +29,15 @@
 </section>
 
 <section class="content">
+
+	<div class="alert alert-info alert-dismissible">
+		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+		<h4>
+			<i class="icon fa fa-info"></i> Total Pembayaran Pelanggan Bulan <?php echo date('F'); ?> Tahun <?php echo date('Y'); ?> </h4>
+		<h4>
+		<?php echo rupiah($tot_bayar); ?>
+		</h4>
+	</div>
 
 	<div class="box box-primary">
 		<div class="box-header with-border">

@@ -218,7 +218,6 @@ function get_client_browser() {
 			<!-- sidebar: style can be found in sidebar.less -->
 			<section class="sidebar">
 				<!-- Sidebar user panel -->
-				</<b>
 				<div class="user-panel">
 					<div class="pull-left image">
 						<img src="dist/img/komp.png" class="" alt="User Image">
@@ -608,8 +607,7 @@ function get_client_browser() {
 
               //default
               default:
-				  echo "<center><br><br><br><br><br><br><br><br><br>
-				  <h1> Halaman tidak ditemukan !</h1></center>";
+				  include "home/not_found.php";
                   break;    
           }
       }else{

@@ -317,8 +317,7 @@ function get_client_browser() {
 
               //default
               default:
-				  echo "<center><br><br><br><br><br><br><br><br><br>
-				  <h1> Halaman tidak ditemukan !</h1></center>";
+			  include "home/not_found.php";
                   break;    
           }
       }else{

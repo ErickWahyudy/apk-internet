@@ -145,7 +145,7 @@ $format = "F"."00".$tambah;
 					<div class="pull-right hidden-xs">
 					</div>
 						<center>
-						<strong>Copyright &copy; 2019 - 2022
+						<strong>Copyright &copy; 2019 - <?php echo date('Y'); ?>
 						<a href="https://bit.ly/kassandrahdproduction" target="blank">KassandraWifi</a>.</strong> All rights reserved.
 						</center>
 				</footer>

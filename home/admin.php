@@ -1,38 +1,39 @@
 <?php
+
+	$kode_tanggal = date("dmy");
+	$kode_tahun = date("Y"); 
+
+	//paket internet
 	$sql = $koneksi->query("SELECT count(id_paket) as paket from tb_paket");
 	while ($data= $sql->fetch_assoc()) {
 	
 		$paket=$data['paket'];
 	}
-?>
 
-<?php
+	//pelanggan aktif
 	$sql = $koneksi->query("SELECT count(id_pelanggan) as huni from tb_pelanggan where status_plg='Aktif'");
 	while ($data= $sql->fetch_assoc()) {
 	
 		$huni=$data['huni'];
 	}
-?>
 
-<?php
+	//tagihan blm lunas
 	$sql = $koneksi->query("SELECT count(id_tagihan) as tagih_b from tb_tagihan where status='BL'");
 	while ($data= $sql->fetch_assoc()) {
 	
 		$tagih=$data['tagih_b'];
 	}
-?>
 
-<?php
+	//tagihan lunas
 	$sql = $koneksi->query("SELECT count(id_tagihan) as tagih_l from tb_tagihan where status='LS'");
 	while ($data= $sql->fetch_assoc()) {
 	
 		$lunas=$data['tagih_l'];
 	}
-?>
 
-<?php
-     // perintah tampil data
-     $sql = $koneksi->query("SELECT sum(tagihan) as tagihan from tb_tagihan where status='LS'");
+
+     // perintah tampil data totel pendapatan
+     $sql = $koneksi->query("SELECT sum(tagihan) as tagihan from tb_tagihan where status='LS' and tahun='$kode_tahun'");
      
      $total = 0;
      $tot_bayar = 0;
@@ -44,11 +45,9 @@
       // total bayar adalah penjumlahan dari keseluruhan total
       $tot_bayar += $total;
   }
-     ?>
 
-<?php
-     // perintah tampil data
-     $sql = $koneksi->query("SELECT sum(biaya_pengeluaran) as biaya_pengeluaran from tb_pengeluaran where keterangan='LUNAS'");
+     // perintah tampil data total pengeluaran
+     $sql = $koneksi->query("SELECT sum(biaya_pengeluaran) as biaya_pengeluaran from tb_pengeluaran where keterangan='LUNAS' and tahun='$kode_tahun'");
      
      $total = 0;
      $tot_pengeluaran = 0;
@@ -170,7 +169,7 @@
 						</b>
 					</h2>
 
-					<p>Total Pendapatan Bersih</p>
+					<p>Total Pendapatan Tahun <?= $kode_tahun; ?> </p>
 				</div>
 				<div class="icon">
 					<i class="fa fa-money"></i>
@@ -192,7 +191,7 @@
 						</b>
 					</h2>
 
-					<p>Total Pengeluaran</p>
+					<p>Total Pengeluaran Tahun <?= $kode_tahun; ?></p>
 				</div>
 				<div class="icon">
 					<i class="fa fa-dollar"></i>
