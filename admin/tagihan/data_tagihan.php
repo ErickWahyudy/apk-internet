@@ -101,7 +101,7 @@
 								%20Tagihan%20hotspot%20KassandraWiFi%20untuk Bulan <?php echo $bulan; ?> Tahun <?php echo $tahun; ?> dgn rincian%0A
 								Biaya Tagihan : <?php echo rupiah($data['tagihan']); ?>%0A
 								Sudah bisa dibayarkan mulai hari ini. Mohon melakukan pembayaran sebelum tgl 10 - <?php echo $bulan; ?> - <?php echo $tahun; ?> demi kenyamanan internet bersama.%0A%0A
-								Pembayaran dapat dilakukan secara Tunai maupun transfer Bank, ShopeePay, LinkAja, Dana, Alfamart, Indomaret atau platform digital lainnya. Untuk link pembayaran via transfer kami kirimkan jika anda memintanya atau juga bisa dilihat di aplikasi KassandraWiFi. %0A
+								Pembayaran dapat dilakukan secara Tunai maupun transfer Bank, ShopeePay, LinkAja, Dana, Alfamart atau platform digital lainnya. %0A
 								_Abaikan pesan jika sudah melakukan pembayaran.%20
 								Terima kasih._%0A%0A
 								Berikut kami sampaikan juga link pembayaran via transfer.%0A
