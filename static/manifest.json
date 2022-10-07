@@ -4,34 +4,34 @@
   "description": "Aplikasi tagihan internet berbasis online. layanan internet sejuta umat non stop tanpa lemot kecuali saat down",
   "icons": [
       {
-          "src": "/dist/img/favicon.ico",
+          "src": "/dist/img/favicon1.ico",
           "sizes": "32x32",
           "type": "image/png"
       },
       {
-          "src": "/dist/img/favicon.ico",
+          "src": "/dist/img/favicon1.ico",
           "sizes": "192x192",
           "type": "image/png"
       },
       {
-          "src": "/dist/img/favicon.ico",
+          "src": "/dist/img/favicon1.ico",
           "sizes": "512x512",
           "type": "image/png"
       },
       {
-          "src": "/dist/img/favicon.ico",
+          "src": "/dist/img/favicon1.ico",
           "sizes": "192x192",
           "type": "image/png",
           "purpose": "any maskable"
       },
       {
-          "src": "/dist/img/favicon.ico",
+          "src": "/dist/img/favicon1.ico",
           "sizes": "180x180",
           "type": "image/png"
       }
   ],
   "start_url": "https://wifi.kassandra.my.id",
   "display": "standalone",
-  "theme_color": "#333333",
-  "background_color": "#333333"
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF"
 }

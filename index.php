@@ -11,106 +11,51 @@
       $data_level = $_SESSION["ses_level"];
     }
 
-	//menampilkan ip address menggunakan function getenv()
-	function get_client_ip() {
-    $ipaddress = '';
-    if (getenv('HTTP_CLIENT_IP'))
-        $ipaddress = getenv('HTTP_CLIENT_IP');
-    else if(getenv('HTTP_X_FORWARDED_FOR'))
-        $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
-    else if(getenv('HTTP_X_FORWARDED'))
-        $ipaddress = getenv('HTTP_X_FORWARDED');
-    else if(getenv('HTTP_FORWARDED_FOR'))
-        $ipaddress = getenv('HTTP_FORWARDED_FOR');
-    else if(getenv('HTTP_FORWARDED'))
-       $ipaddress = getenv('HTTP_FORWARDED');
-    else if(getenv('REMOTE_ADDR'))
-        $ipaddress = getenv('REMOTE_ADDR');
-    else
-        $ipaddress = 'IP tidak dikenali';
-    return $ipaddress;
-}
-
-	 //menampilkan jenis web browser pengunjung
-function get_client_browser() {
-    $browser = '';
-    if(strpos($_SERVER['HTTP_USER_AGENT'], 'Netscape'))
-        $browser = 'Netscape';
-    else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Firefox'))
-        $browser = 'Firefox';
-    else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome'))
-        $browser = 'Chrome';
-    else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Opera'))
-        $browser = 'Opera';
-    else if (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE'))
-        $browser = 'Internet Explorer';
-  	else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Browser'))
-        $browser = 'Browser';
-    else
-        $browser = 'Other';
-    return $browser;
-}
-
 	include "inc/koneksi.php";
 	include "inc/rupiah.php";
-?>
-<?php
+
 	$sql = $koneksi->query("SELECT count(id_paket) as paket from tb_paket");
 	while ($data= $sql->fetch_assoc()) {
 	
 		$paket=$data['paket'];
 	}
-?>
 
-<?php
 	$sql = $koneksi->query("SELECT count(id_pelanggan) as huni from tb_pelanggan");
 	while ($data= $sql->fetch_assoc()) {
 	
 		$huni=$data['huni'];
 	}
-?>
 
-<?php
 	$sql = $koneksi->query("SELECT count(id_tagihan) as tagih_b from tb_tagihan where status='BL'");
 	while ($data= $sql->fetch_assoc()) {
 	
 		$tagih=$data['tagih_b'];
 	}
-?>
 
-<?php
 	$sql = $koneksi->query("SELECT count(id_tagihan) as tagih_l from tb_tagihan where status='LS'");
 	while ($data= $sql->fetch_assoc()) {
 	
 		$lunas=$data['tagih_l'];
 	}
-?>
 
-<?php
 	$sql = $koneksi->query("SELECT count(id_tagihan_lain) as tagihL_b from tb_tagihan_lain where status='BL'");
 	while ($data= $sql->fetch_assoc()) {
 	
 		$tagihL=$data['tagihL_b'];
 	}
-?>
 
-<?php
 	$sql = $koneksi->query("SELECT count(id_tagihan_lain) as tagihL_l from tb_tagihan_lain where status='LS'");
 	while ($data= $sql->fetch_assoc()) {
 	
 		$lunasL=$data['tagihL_l'];
 	}
-?>
 
-<?php
 	$sql = $koneksi->query("SELECT count(id_pengeluaran) as tagihP_b from tb_pengeluaran where keterangan='Belum Saya Bayar'");
 	while ($data= $sql->fetch_assoc()) {
 	
 		$tagihP=$data['tagihP_b'];
 	}
-?>
 
-<?php
 	$sql = $koneksi->query("SELECT count(id_pengeluaran) as tagihP_l from tb_pengeluaran where keterangan='LUNAS'");
 	while ($data= $sql->fetch_assoc()) {
 	
