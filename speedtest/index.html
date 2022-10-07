@@ -69,7 +69,7 @@
 					<div class="pull-right hidden-xs">
 					</div>
 						
-						<strong>Copyright &copy; 2019 - 2022
+						<strong>Copyright &copy; 2019 - <span id="tahun"></span>
 						<a href="https://bit.ly/kassandrahdproduction" target="blank">KassandraWifi</a>.</strong> All rights reserved.
 						</center>
 				</footer>
@@ -84,7 +84,17 @@
 	<!-- iCheck -->
 	<script src="../https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 	<!-- sweet alert -->
-
+	<script type="text/javascript">
+        // 1 detik = 1000
+        window.setTimeout("waktu()",1000);  
+        function waktu() {   
+        var tanggal = new Date();  
+        setTimeout("waktu()",1000);  
+        document.getElementById("jam").innerHTML = tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds();
+        }
+        var tahun = new Date().getFullYear();
+        document.getElementById("tahun").innerHTML = tahun;
+        </script>
 </body>
 
 </html>

@@ -134,7 +134,7 @@
                 <a href="./kassandra-wifi/about.html" class="nav-item nav-link">About Us</a>
                 <a href="./kassandra-wifi/service.html" class="nav-item nav-link">Services</a>
                 <a href="./kassandra-wifi/project.html" class="nav-item nav-link">Projects</a>
-                <a href="speedtest/" class="nav-item nav-link">Speedtest</a>
+                <a href="./kassandra-wifi/speedtest.html" class="nav-item nav-link">Speedtest</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
@@ -148,12 +148,12 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Login Aplikasi</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
-                        <a href="member.php" target="_blank" class="dropdown-item">Members</a>
-                        <a href="login.php" target="_blank" class="dropdown-item">Our Team</a>
+                        <a href="member.php" target="" class="dropdown-item">Members</a>
+                        <a href="login.php" target="" class="dropdown-item">Our Team</a>
                     </div>
                 </div>
             </div>
-            <a href="register.php" target="_blank" class="btn btn-sm btn-light rounded-pill py-2 px-4">Daftar sekarang ?</a>
+            <a href="register.php" target="" class="btn btn-sm btn-light rounded-pill py-2 px-4">Daftar sekarang ?</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -678,7 +678,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; 2022 <a href="#">KASSANDRAWIFI</a>, All Right Reserved.
+                        &copy; <?php echo date('Y'); ?> <a href="#">KASSANDRAWIFI</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
