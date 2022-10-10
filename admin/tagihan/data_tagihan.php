@@ -1,6 +1,7 @@
 <?php
-	$bulan = $_POST["bulan"];
-	$tahun = $_POST["tahun"];
+	$bulan      = $_POST["bulan"];
+	$tahun      = $_POST["tahun"];
+    $kode_tgl   = date("d-m-Y");
 ?>
 <?php
 	$sql = $koneksi->query("SELECT * from tb_bulan where id_bulan='$bulan'");
@@ -98,10 +99,25 @@
                                     title="Bayar Tagihan" class="btn btn-info">
                                     <i class="glyphicon glyphicon-ok"></i> BAYAR
                                 </a>&nbsp;&nbsp;&nbsp;
+                                <?php $stt = $kode_tgl  ?>
+                                <?php if($stt <= date('09-m-Y')){ ?>
                                 <a href="https://api.whatsapp.com/send?phone=<?php echo $data['no_hp']; ?>&text=Pelanggan Yth. Sdr/i%20<?php echo $data['nama']; ?>,
 								%20Tagihan%20hotspot%20KassandraWiFi%20untuk Bulan <?php echo $bulan; ?> Tahun <?php echo $tahun; ?> dgn rincian%0A
 								Biaya Tagihan : <?php echo rupiah($data['tagihan']); ?>%0A
 								Sudah bisa dibayarkan mulai hari ini. Mohon melakukan pembayaran sebelum tgl 10 - <?php echo $bulan; ?> - <?php echo $tahun; ?> demi kenyamanan internet bersama.%0A%0A
+								Pembayaran dapat dilakukan secara Tunai maupun transfer Bank, ShopeePay, LinkAja, Dana, Alfamart atau platform digital lainnya.%0A%0A
+								Berikut kami sampaikan juga link pembayaran via transfer.%0A
+								https://wifi.kassandra.my.id/pelanggan/tagihan_plg.php?id_tagihan=<?php echo $data['id_tagihan']; ?>  %0A%0A
+								
+								_Pesan ini dikirim otomatis oleh system aplikasi KassandraWiFi._%0A
+								-wifi@kassandra.my.id-" target=" _blank" title="Pesan WhatsApp" class="btn btn-success">
+                                    <b>Whatsapp</b>
+                                </a>
+                                <?php }elseif($stt >= date('10-m-Y')){ ?>
+                                <a href="https://api.whatsapp.com/send?phone=<?php echo $data['no_hp']; ?>&text=Pelanggan Yth. Sdr/i%20<?php echo $data['nama']; ?>,
+								%20Tagihan%20hotspot%20KassandraWiFi%20untuk Bulan <?php echo $bulan; ?> Tahun <?php echo $tahun; ?> dgn rincian%0A
+								Biaya Tagihan : <?php echo rupiah($data['tagihan']); ?>%0A
+								*Hari ini adalah batas terakhir pembayaran sdr/i <?php echo $data['nama']; ?>*. Mohon segera melakukan pembayaran demi kenyamanan internet bersama.%0A%0A
 								Pembayaran dapat dilakukan secara Tunai maupun transfer Bank, ShopeePay, LinkAja, Dana, Alfamart atau platform digital lainnya. %0A
 								_Abaikan pesan jika sudah melakukan pembayaran.%20
 								Terima kasih._%0A%0A
@@ -116,6 +132,7 @@
                             </td>
                         </tr>
                         <?php
+                              }
 						}
 						?>
                     </tbody>

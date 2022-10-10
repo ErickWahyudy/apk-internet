@@ -107,7 +107,7 @@ while ($data= $sql->fetch_assoc()) {
 									<i class="glyphicon glyphicon-print"></i> Struk</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 									<a href="https://api.whatsapp.com/send?phone=<?php echo $data['no_hp']; ?>&text=Terima kasih Sdr/i%20<?php echo $data['nama']; ?>,%20
 									Sudah melakukan pembayaran Tagihan%20hotspot%20KassandraWiFi%20untuk%20Bulan%20<?php echo $data['bulan']; ?>%20Tahun%20<?php echo $data['tahun']; ?>%0A
-									Sebesar%20<?php echo rupiah($data['tagihan']); ?> pada tanggal <?php $data['tgl_bayar']; echo date("d M Y", strtotime($tgl)) ?>.%0A
+									Sebesar%20<?php echo rupiah($data['tagihan']); ?> pada tanggal <?php $data['tgl_bayar']; echo date("d F Y", strtotime($tgl)) ?>.%0A
 									Tetap nikmati layanan hotspot unlimited 24 jam non stop tanpa lemot kecuali saat wifi down dari KassandraWiFi.%0A%0A
 									Anda juga bisa mendownload ataupun melihat struk pembayaran lunas tagihan di aplikasi KassandraWiFi%0A
 									https://wifi.kassandra.my.id/pelanggan/tagihan_plg.php?id_tagihan=<?php echo $data['id_tagihan']; ?> %0A%0A
