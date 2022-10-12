@@ -77,7 +77,7 @@ foreach ($result as $key => $data) { //mengirim email untuk setiap baris data
                             <td style=font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;border-width:1px;border-style:dashed;border-color:rgb(37,63,89);background:lavender;color:rgb(0,0,0);font-size:16px;padding-left:1em;padding-right:1em>  ".
                            "<br>Berikut adalah total biaya ".$data['keterangan'] . " anda :".
                            "<br><b>Rp. " .$data['tagihan']. "</b>".
-                           "<br>Pembayaran dapat dilakukan secara Tunai maupun transfer Bank, ShopeePay, LinkAja, OVO, Alfamart, Indomaret atau platform digital lainnya.
+                           "<br>Pembayaran dapat dilakukan secara Tunai maupun transfer Bank, ShopeePay, LinkAja, Dana, Alfamart atau platform digital lainnya.
                            <br><br>Mohon segera melunasi biaya tersebut <b>sebelum tgl ".$deadline ."</b> demi kenyamanan internet bersama!" .
                            "<p align=center colspan=2 style=font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif>
                             <a href='https://wifi.kassandra.my.id/struk/cetak_struk_tagihan_lain.php?id_tagihan_lain=" .$data['id_tagihan_lain'] . "' style=color:rgb(255,255,255);background-color:#589bf2;border-width:initial;border-style:none;border-radius:15px;padding:10px 20px target=_blank >" . 

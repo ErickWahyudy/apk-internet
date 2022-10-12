@@ -76,7 +76,7 @@ foreach ($result as $key => $data) { //mengirim email untuk setiap baris data
                             "<p style=font-size:18px>Pelanggan Yth. Sdr/i ".$data['nama']. " Ada tagihan hotspot
                             KassandraWiFi untuk Bulan ".$data['bulan'] . " / Tahun " .$data['tahun']. " yang belum dibayar.</p>".
                            "Dengan rincian Biaya Tagihan : <br><b>Rp. ".$data['tagihan']. "</b>".
-                           "<br>Pembayaran dapat dilakukan secara Tunai maupun transfer Bank, ShopeePay, LinkAja, OVO, Alfamart, Indomaret atau platform digital lainnya.
+                           "<br>Pembayaran dapat dilakukan secara Tunai maupun transfer Bank, ShopeePay, LinkAja, Dana, Alfamart atau platform digital lainnya.
                            <br><br>Anda dapat melunasi pembayaran sebelum batas akhir pada tanggal 10 - ".$data['bulan'] . " - " .$data['tahun'] . 
                            ". Mari lunasi tagihan ini segera, demi kenyamanan internet bersama!
                            <p align=center colspan=2 style=font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif>
