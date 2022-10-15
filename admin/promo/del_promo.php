@@ -1,6 +1,6 @@
 <?php
 if(isset($_GET['kode'])){
-            $sql_hapus = "DELETE FROM tb_lapor WHERE id_lapor ='".$_GET['kode']."'";
+            $sql_hapus = "DELETE FROM tb_promo WHERE id_promo ='".$_GET['kode']."'";
             $query_hapus = mysqli_query($koneksi, $sql_hapus);
 
             if ($query_hapus) {
@@ -8,7 +8,7 @@ if(isset($_GET['kode'])){
                 Swal.fire({title: 'Hapus Data Berhasil',text: '',icon: 'success',confirmButtonText: 'OK'
                 }).then((result) => {
                     if (result.value) {
-                        window.location = 'index.php?page=data-lapor';
+                        window.location = 'index.php?page=data-promo';
                     }
                 })</script>";
                 }else{
@@ -16,14 +16,8 @@ if(isset($_GET['kode'])){
                 Swal.fire({title: 'Hapus Data Gagal',text: '',icon: 'error',confirmButtonText: 'OK'
                 }).then((result) => {
                     if (result.value) {
-                        window.location = 'index.php?page=data-lapor';
+                        window.location = 'index.php?page=data-promo';
                     }
                 })</script>";
             }
         }
-
-$files    =glob('uploadfile/*');
-foreach ($files as $lapor) {
-    if (is_file($lapor))
-    unlink($lapor); // hapus file
-}

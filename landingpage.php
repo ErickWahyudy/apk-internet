@@ -131,6 +131,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav me-auto p-3 p-lg-0">
                 <a href="landingpage.php" class="nav-item nav-link active">Home</a>
+                <a href="promo.php" class="nav-item nav-link">Promo</a>
                 <a href="./kassandra-wifi/about.html" class="nav-item nav-link">About Us</a>
                 <a href="./kassandra-wifi/service.html" class="nav-item nav-link">Services</a>
                 <a href="./kassandra-wifi/project.html" class="nav-item nav-link">Projects</a>
@@ -236,7 +237,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="fact-item bg-light rounded text-center h-100 p-5">
                         <i class="fa fa-certificate fa-4x text-primary mb-4"></i>
-                        <h5 class="mb-3">Pemasangan Baru</h5>
+                        <h5 class="mb-3">Biaya Pemasangan</h5>
                         <h4 class="mb-3"><del style="color:red">Rp. 1.000.000</del></h4>
                         <h4 class="mb-3">Rp. 350.000</h4>
                         <h6 class="text-muted"><small>S&k berlaku</small></h6>
@@ -252,8 +253,8 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="fact-item bg-light rounded text-center h-100 p-5">
                         <i class="fa fa-users-cog fa-4x text-primary mb-4"></i>
-                        <h5 class="mb-3">Teknisi only on problem solutions</h5>
-                        <h4 class="mb-3">24 hour</h4>
+                        <h5 class="mb-3">Teknisi yang selalu standbay jika ada kendala / masalah jaringan</h5>
+                        <h4 class="mb-3">24 jam</h4>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">

@@ -286,9 +286,9 @@
 					</li>
 
 					<li class="treeview">
-						<a href="?page=data-lapor">
+						<a href="?page=data-promo">
 							<i class="fa fa-whatsapp"></i>
-							<span>Layanan Laporan Kendala</span>
+							<span>Pendaftar Promo</span>
 							<span class="pull-right-container">
 							</span>
 						</a>
@@ -497,18 +497,21 @@
                   include "admin/informasi/uploadfile.php";
 				  break;
 
-				//data_lapor
-              case 'data-lapor':
-                  include "admin/lapor/data_lapor.php";
+				//data_promo
+              case 'data-promo':
+                  include "admin/promo/data_promo.php";
                   break;
-              case 'add-lapor':
-                  include "admin/lapor/add_lapor.php";
+			case 'status-promo':
+                  include "admin/promo/status_promo.php";
                   break;
-              case 'edit-lapor':
-                  include "admin/lapor/edit_lapor.php";
+              case 'add-promo':
+                  include "admin/promo/add_promo.php";
                   break;
-              case 'del-lapor':
-                  include "admin/lapor/del_lapor.php";
+              case 'edit-promo':
+                  include "admin/promo/edit_promo.php";
+                  break;
+              case 'del-promo':
+                  include "admin/promo/del_promo.php";
 				  break;
 
 				//data_feedback
