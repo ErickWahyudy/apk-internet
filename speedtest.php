@@ -12,8 +12,9 @@
     <meta name="author" content="KASSANDRA, KASSANDRA HD PRODUCTION">
     <meta content='index,follow' name='robots' />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+   <!-- Favicon -->
+   <link rel="shortcut icon" href="../kassandra-wifi/dist/img/favicon.ico" type="image/x-icon">
+    <link href="./kassandra-wifi/img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,15 +26,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="./kassandra-wifi/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="./kassandra-wifi/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="./kassandra-wifi/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="./kassandra-wifi/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="./kassandra-wifi/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -125,40 +126,38 @@
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-primary navbar-dark sticky-top py-lg-0 px-lg-5 wow fadeIn"
-        data-wow-delay="0.1s">
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
         <a href="#" class="navbar-brand ms-3 d-lg-none">MENU</a>
         <button type="button" class="navbar-toggler me-3" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav me-auto p-3 p-lg-0">
-                <a href="../landingpage.php" class="nav-item nav-link">Home</a>
-                <a href="../promo.php" class="nav-item nav-link">Promo</a>
-                <a href="about.html" class="nav-item nav-link">About Us</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
-                <a href="project.html" class="nav-item nav-link">Projects</a>
-                <a href="speedtest.html" class="nav-item nav-link active">Speedtest</a>
+                <a href="landingpage.php" class="nav-item nav-link active">Home</a>
+                <a href="promo.php" class="nav-item nav-link">Promo</a>
+                <a href="./kassandra-wifi/about.html" class="nav-item nav-link">About Us</a>
+                <a href="./kassandra-wifi/service.html" class="nav-item nav-link">Services</a>
+                <a href="./kassandra-wifi/project.html" class="nav-item nav-link">Projects</a>
+                <a href="speedtest.php" class="nav-item nav-link">Speedtest</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
-                        <a href="feature.html" class="dropdown-item">Features</a>
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
+                        <a href="./kassandra-wifi/feature.html" class="dropdown-item">Features</a>
+                        <a href="./kassandra-wifi/team.html" class="dropdown-item">Our Team</a>
+                        <a href="./kassandra-wifi/testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="./kassandra-wifi/404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                <a href="./kassandra-wifi/contact.html" class="nav-item nav-link">Contact Us</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Login Aplikasi</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
-                        <a href="../member.php" target="" class="dropdown-item">Members</a>
-                        <a href="../login.php" target="" class="dropdown-item">Our Team</a>
+                        <a href="member.php" target="" class="dropdown-item">Members</a>
+                        <a href="login.php" target="" class="dropdown-item">Our Team</a>
                     </div>
                 </div>
             </div>
-            <a href="../register.php" target="" class="btn btn-sm btn-light rounded-pill py-2 px-4">Daftar
-                sekarang ?</a>
+            <a href="register.php" target="" class="btn btn-sm btn-light rounded-pill py-2 px-4">Daftar sekarang ?</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -210,22 +209,22 @@
                     <h5 class="text-light mb-4">Gallery</h5>
                     <div class="row g-2">
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/1.jpg" alt="Image">
+                            <img class="img-fluid rounded" src="./kassandra-wifi/img/1.jpg" alt="Image">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/2.jpg" alt="Image">
+                            <img class="img-fluid rounded" src="./kassandra-wifi/img/2.jpg" alt="Image">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/3.jpg" alt="Image">
+                            <img class="img-fluid rounded" src="./kassandra-wifi/img/3.jpg" alt="Image">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/4.jpg" alt="Image">
+                            <img class="img-fluid rounded" src="./kassandra-wifi/img/4.jpg" alt="Image">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/5.jpg" alt="Image">
+                            <img class="img-fluid rounded" src="./kassandra-wifi/img/5.jpg" alt="Image">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/6.jpg" alt="Image">
+                            <img class="img-fluid rounded" src="./kassandra-wifi/img/6.jpg" alt="Image">
                         </div>
                     </div>
                 </div>
@@ -265,18 +264,19 @@
             class="bi bi-arrow-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="./kassandra-wifi/lib/wow/wow.min.js"></script>
+    <script src="./kassandra-wifi/lib/easing/easing.min.js"></script>
+    <script src="./kassandra-wifi/lib/waypoints/waypoints.min.js"></script>
+    <script src="./kassandra-wifi/lib/counterup/counterup.min.js"></script>
+    <script src="./kassandra-wifi/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="./kassandra-wifi/lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="./kassandra-wifi/js/main.js"></script>
+
     <script type="text/javascript">
         // 1 detik = 1000
         window.setTimeout("waktu()",1000);  
