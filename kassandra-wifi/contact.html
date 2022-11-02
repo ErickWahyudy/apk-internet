@@ -192,18 +192,24 @@
                     <p class="text-center mb-4">The contact form is currently inactive. Get a functional and working
                         contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code
                         and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                    <form>
+                    <form action="javascript:chat();" method="post">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control" id="nama" placeholder="Your Name">
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
+                                    <input type="number" class="form-control" id="nomor" placeholder="Your Number">
+                                    <label for="number">Your Number</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="alamat" placeholder="Your Address">
+                                    <label for="address">Your Address</label>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -214,7 +220,7 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message"
+                                    <textarea class="form-control" placeholder="Leave a message here" id="pesan"
                                         style="height: 200px"></textarea>
                                     <label for="message">Message</label>
                                 </div>
@@ -230,6 +236,23 @@
         </div>
     </div>
     <!-- Contact End -->
+    <div id="confirm" class="modal fade" role="dialog" data-backdrop="static">
+        <div class="modal-dialog modal-sm">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body text-center">
+                <p></p>
+              <p style="font-size: 16px">Pesan Anda berhasil terkirim, silahkan klik OK untuk melanjutkan.</p>
+              <p style="font-size: 14px"><a href="../landingpage.php"><button class="btn btn-success beli">OK</button></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/bootstrapiklan.min.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/jqueryiklan.min.js"></script>
 
 
     <!-- Google Map Start -->

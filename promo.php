@@ -8,7 +8,7 @@
 
 <head>
 	<?php
-		$sql = $koneksi->query("SELECT * from tb_promo order by id_promo asc");
+		$sql = $koneksi->query("SELECT * from tb_promo order by id_promo asc limit 1");
 		while ($data= $sql->fetch_assoc()) {
     ?>
 
@@ -36,6 +36,27 @@
 	<link rel="stylesheet" href="dist/css/custom.bootstrapiklan.min.css">
 
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+    <!-- ttd digital -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+    <link type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.css" rel="stylesheet"> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="inc/signature/js/jquery.signature.min.js"></script>
+    <script type="text/javascript" src="inc/signature/js/jquery.ui.touch-punch.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="inc/signature/css/jquery.signature.css">
+   
+    <style>
+        .kbw-signature { width: 100%; height: 200px;}
+        #sig canvas{
+            width: 100% !important;
+            height: auto;
+        }
+
+		#preview_ktp{
+	    display:none;
+		}
+
+    </style>
 
 	<div align="center"><noscript>
 	<div style="position:fixed; top:0px; left:0px; z-index:3000; height:100%; width:100%; background-color:#FFFFFF">
@@ -170,6 +191,23 @@ $frmt = "Z"."00".$tmbh;
 						</div>
 
 						<div class="form-group">
+							<label class="col-sm-2 control-label">Bukti KTP<br>
+							<small>(KTP terlihat jelas ya..)</small></label>
+							<div class="col-sm-6">
+								<input type="file" class="form-control" id="bukti_ktp" name="bukti_ktp" placeholder="bukti_ktp" autocomplete="off" onchange="previewKTP()" required>
+								<img id="preview_ktp" alt="image preview" width="30%" />
+							</div>
+						</div>
+
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label" for="">TTD Kesepakatan:</label>
+                            <div class="col-sm-6">
+                                <div id="sig" ></div>
+                                <textarea id="signature64" name="signed" style="display: none"></textarea> <br>
+                                <button id="clear" class="btn-warning">ulangi ttd</button>
+                            </div>
+                        </div>
+						<div class="form-group">
 							<div class="col-sm-6 control-label">
 								<input type="checkbox" class="control" id="checkbox" name="checkbox" placeholder="checkbox" autocomplete="off" required> Saya memastikan data yang saya tuliskan di form sudah benar
 							</div>
@@ -199,6 +237,27 @@ $frmt = "Z"."00".$tmbh;
 			</div>
 		</div>
 </section>
+<script type="text/javascript">
+	//ttd digital
+    var sig = $('#sig').signature({syncField: '#signature64', syncFormat: 'PNG'});
+    $('#clear').click(function(e) {
+        e.preventDefault();
+        sig.signature('clear');
+        $("#signature64").val('');
+    });
+
+	//preview gambar
+		function previewKTP() {
+		document.getElementById("preview_ktp").style.display = "block";
+		var oFReader = new FileReader();
+		oFReader.readAsDataURL(document.getElementById("bukti_ktp").files[0]);
+	
+		oFReader.onload = function(oFREvent) {
+		document.getElementById("preview_ktp").src = oFREvent.target.result;
+		};
+		
+	};
+</script>
 <!-- Modal content Iklan-->
 <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -216,9 +275,9 @@ $frmt = "Z"."00".$tmbh;
                     <div class="fact-item bg-light rounded text-center h-100 p-5">
                         <i class="fa fa-certificate fa-4x text-primary mb-4"></i>
                         <h5 class="mb-3">Biaya Pemasangan</h5>
-                        <h4 class="mb-3"><del style="color:red">Rp. 1.000.000</del></h4>
+                       
 						<h4 class="mb-3"><del style="color:red">Rp. 350.000</del></h4>
-                        <h4 class="mb-3">GRATIS !!</h4>
+                        <h4 class="mb-3">Rp. 200.000 !!</h4>
                         <h6 class="text-muted"><small>S&k berlaku</small></h6>
                     </div>
                 </div>
@@ -360,7 +419,11 @@ $frmt = "Z"."00".$tmbh;
 </html>
 
 <?php
+
+	//simpan data
     if (isset ($_POST['Simpan'])){
+
+							
 
 		include "koneksi.php"; //ini untuk masuk ke database
 		$cekdulu= "select * from tb_pelanggan where email='$_POST[email]'"; //email dan $_POST[un] diganti sesuai dengan yang kalian gunakan
@@ -388,6 +451,63 @@ $frmt = "Z"."00".$tmbh;
 		}
 		else {
 
+			//kompress gambar
+			function compressImage($source, $destination, $quality) {
+				// Mendapatkan info gambar
+				$imgInfo = getimagesize($source);
+				$mime = $imgInfo['mime'];
+				 
+				// Membuat gambar baru dari file yang diupload
+				switch($mime){
+					case 'image/jpeg':
+						$image = imagecreatefromjpeg($source);
+						break;
+					case 'image/png':
+						$image = imagecreatefrompng($source);
+						break;
+					case 'image/gif':
+						$image = imagecreatefromgif($source);
+						break;
+					default:
+						$image = imagecreatefromjpeg($source);
+				}
+				 
+				// simpan gambar
+				imagejpeg($image, $destination, $quality);
+				 
+				// Return gambar yang dikompres
+				return $destination;
+			}
+			//menyimpan bukti ktp ke folder
+			//upload file ke server
+			$ekstensi_diperbolehkan     = array('jpg','png', 'JPG', 'PNG', 'jpeg', 'JPEG');
+			$bukti_ktp    				= $_FILES['bukti_ktp']['name'];
+			$x        					= explode('.', $bukti_ktp);
+			$ekstensi    				= strtolower(end($x));
+			$ukuran       				= $_FILES['bukti_ktp']['size'];
+			$namabaruktp 				= $_POST['nama']."_".$bukti_ktp;
+			$file_tmp    				= $_FILES['bukti_ktp']['tmp_name'];
+			//kompress gambar
+			$source_img 				= $file_tmp;
+			$destination_img 			= 'uploadfile/bukti_ktp/'.$namabaruktp;
+			$quality 					= 50;
+			compressImage($source_img, $destination_img, $quality);
+			
+            //menyimpan tanda tangan digital ke dalam folder
+			$folderPath = "uploadfile/signature/";
+			if(empty($_POST['signed'])){
+				echo "Kosong";
+			}else{
+			$image_parts = explode(";base64,", $_POST['signed']); 
+			$image_type_aux = explode("image/", $image_parts[0]);
+			$image_type = $image_type_aux[1];
+			$image_base64 = base64_decode($image_parts[1]);
+			$file = $folderPath . $_POST['nama']."_".$_POST['no_hp']. '.'.$image_type;
+            $sv_ttd = $_POST['nama']."_".$_POST['no_hp']. '.'.$image_type;
+			file_put_contents($file, $image_base64);
+			echo "Tanda Tangan Sukses Diupload ";
+			}
+
 
     
         $sql_simpan1 = "INSERT INTO tb_pelanggan (id_pelanggan, nama, alamat, no_hp, terdaftar_mulai, email, password, id_paket) VALUES (
@@ -400,10 +520,12 @@ $frmt = "Z"."00".$tmbh;
 		  	 	 	 '".$_POST['password']."',
            			 '".$_POST['id_paket']."')";
 					 
-		$sql_simpan2 = "INSERT INTO tb_promo (id_promo, id_pelanggan, tgl_daftar) VALUES (
+		$sql_simpan2 = "INSERT INTO tb_promo (id_promo, id_pelanggan, tgl_daftar, signature, bukti_ktp) VALUES (
            			 '".$frmt."',
 					 '".$format."',
-		 			 '".$tanggal."')";
+		 			 '".$tanggal."',
+                     '".$sv_ttd."',
+					 '".$namabaruktp."')";
 		$query_simpan = mysqli_multi_query($koneksi, $sql_simpan1 . ';' . $sql_simpan2);
         mysqli_close($koneksi);
 
@@ -534,5 +656,6 @@ $frmt = "Z"."00".$tmbh;
 	}
 }
 }
+		
 
 ?>

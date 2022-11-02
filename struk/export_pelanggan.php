@@ -61,12 +61,6 @@
 	
 		$lunasPL=$data['tagihP_l'];
 	}
-
-	$sql = $koneksi->query("SELECT count(id_konfirmasi) as konfirmasi from tb_tagihan_konfirmasi inner join tb_tagihan on tb_tagihan_konfirmasi.id_tagihan=tb_tagihan.id_tagihan where tb_tagihan.status='BL'");
-	while ($data= $sql->fetch_assoc()) {
-	
-		$konfirmasi=$data['konfirmasi'];
-	}
 ?>
 
 <!DOCTYPE html>
@@ -283,17 +277,6 @@
 					<li class="header">OTHER</li>
 
 					<li class="treeview">
-						<a href="?page=konfirmasi-pembayaran">
-							<i class="fa fa-money"></i>
-							<span>Konfirmasi Bayar</span>
-							<span class="label pull-right bg-red"><?= $konfirmasi; ?></span>
-							<span class="pull-right-container">
-							</span>
-						</a>
-					</li>
-
-
-					<li class="treeview">
 						<a href="?page=data-feedback">
 							<i class="fa fa-caret-square-o-up"></i>
 							<span>Feedback Pelanggan</span>
@@ -457,9 +440,6 @@
                 break;
 			case 'edit-tagihanL':
 				include "admin/tagihan/edit_tagihanL.php";
-				break;
-			case 'konfirmasi-pembayaran':
-				include "admin/tagihan/konfirmasi_pembayaran.php";
 				break;
 
 

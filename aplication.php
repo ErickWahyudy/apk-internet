@@ -261,6 +261,10 @@
               case 'data-tagihan-lain':
                   include "pelanggan/data_tagihan_lain.php";
                   break;
+				  
+			  case 'konfirmasi-pembayaran':
+				  include "pelanggan/konfirmasi_pembayaran.php";
+				  break;
 
               case 'data-informasi':
                   include "pelanggan/data_informasi.php";

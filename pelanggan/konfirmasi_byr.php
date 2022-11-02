@@ -83,12 +83,31 @@ function get_client_browser() {
 				$id = $_GET['id_tagihan'];
 
 				$no=1;
-				$sql_tampil = "SELECT p.id_pelanggan, p.nama, p.no_hp, p.alamat, t.id_tagihan, t.tagihan, t.status, t.tgl_bayar, t.bulan, t.tahun, k.id_paket, k.paket   
+				$sql_tampil = "SELECT p.id_pelanggan, p.nama, p.no_hp, p.alamat, t.id_tagihan, t.tagihan, t.status, t.tgl_bayar, t.bulan, t.tahun, k.id_paket, k.paket, m.id_bulan, m.bulan    
 				from tb_pelanggan p inner join tb_tagihan t on p.id_pelanggan=t.id_pelanggan 
-				inner join tb_paket k on k.id_paket=p.id_paket where id_tagihan='$id'";
+				inner join tb_paket k on k.id_paket=p.id_paket inner join tb_bulan m on m.id_bulan=t.bulan where t.id_tagihan='$id'";
 				$query_tampil = mysqli_query($koneksi, $sql_tampil);
 				while ($data = mysqli_fetch_array($query_tampil,MYSQLI_BOTH)) {
-				?>
+
+//kode
+ 
+$tanggal = date("Y-m-d");
+
+$carikode = mysqli_query($koneksi,"SELECT id_konfirmasi FROM tb_tagihan_konfirmasi order by id_konfirmasi desc");
+$datakode = mysqli_fetch_array($carikode);
+$kode = $datakode['id_konfirmasi'];
+$urut = substr($kode, 1, 3);
+$tambah = (int) $urut + 1;
+
+if (strlen($tambah) == 1){
+$format = "K"."00".$tambah;
+ 	}else if (strlen($tambah) == 2){
+ 	$format = "K"."0".$tambah;
+			}else (strlen($tambah) == 3){
+			$format = "K".$tambah
+				}
+
+?>
 
 </head>
 
@@ -262,142 +281,168 @@ function get_client_browser() {
 		</section>
 
 <section class="content">
-	<div class="box box-primary">
-		<div class="box-header with-border">
-			<b style="font-size: 14pt">Tagihan Anda</b>
-			<div class="box-tools pull-right">
-			</div>
-			<br>
-			<span class="">
-					<?php $stt = $data['status']  ?>
-								<?php if($stt == 'BL'){ ?>
-								<span class="">
-									Segera selesaikan pembayaran tagihan Anda agar selalu dapat terhubung dengan layanan hotspot KassandraWiFi. Terima Kasih 🙂
-								</span>
-								<?php }elseif($stt == 'LS'){ ?>
-								<span class="">
-									Terima Kasih sudah melunasi tagihan anda. Tetap nikmati layanan hotspot unlimited 24 jam non stop tanpa lemot kecuali saat wifi down dari KassandraWiFi 🙂
-								</span>
-					<?php } ?>
-			<span style='font-size:15pt' class="pull-right">
-			<?php $stt = $data['status']  ?>
-			<?php if($stt == 'BL'){ ?>
-			<span class="label label-danger">Belum Anda Bayar</span>
-			<?php }elseif($stt == 'LS'){ ?>
-			<span class="label label-info">Lunas</span>
-			<?php } ?>
-
-					</a>
-				</span>
-		</div>
-		<!-- /.box-header -->
-		
-		<div class="box-body">
-			<div class="table-responsive">
-				<table id="" class="table" border="0" cellspacing="0" style="width: 100%">
-	<thead>
-				
-<td class="col-sm-2" width='70%' align='left' style='padding-right:80px; vertical-align:top;'>
-<span style='font-size:12pt'><b>Periode Tagihan</b></span></br>
-<?php echo $data['bulan']; ?> / <?php echo $data['tahun']; ?>
-</td>
-<td style='vertical-align:top' width='30%' align='left'>
-<b><td class="col-sm-2" style='vertical-align:top' width='30%' align='left'>
-<b>Batas Waktu Pembayaran</b><br>
-Tanggal 10 - Bulan <?php echo $data['bulan']; ?> / <?php echo $data['tahun']; ?>
-</td>
-
-</table>
-<table id="" class="table table-striped" border="0" cellspacing="0" style="width: 100%">
- 
-							<tr>
-							<th class="col-sm-2">Detail Tagihan</th>
+	<div class="row">
+		<div class="col-md-12">
+			<!-- general form elements -->
+			<div class="box box-success">
+				<div class="box-header with-border">
+					<h3 class="box-title">Konfirmasi Pembayaran ?</h3>
+				</div>
+				<table id="" class="table table-striped" border="0" cellspacing="0" style="width: 100%">
+ 						<tr>
+							<th class="col-sm-2 control-label">Pelanggan :</th>
 							<td>
-								:
-							</td>
-							</tr>
-
-
-						<tr>
-							<th class="col-sm-2">ID Pelanggan</th>
-							<td>
-								: <?php echo $data['id_pelanggan']; ?> / <?php echo $data['nama']; ?>
+								<?php echo $data['nama']; ?> / <?php echo $data['bulan']; ?> / <?php echo rupiah ($data['tagihan']); ?>
 							</td>
 						</tr>
 
-						<tr>
-							<th class="col-sm-2">Paket Internet</th>
-							<td>
-								: <?php echo $data['id_paket']; ?> | <?php echo $data['paket']; ?>
-							</td>
-						</tr>
-
-						<tr>
-							<th class="col-sm-2">Nomor Tagihan</th>
-							<td>
-								: <?php echo $data['id_tagihan']; ?>
-							</td>
-						</tr>
-
-						<tr>
-							<th class="col-sm-2">Deskripsi</th>
-							<td>
-								: Iuran Hotspot WiFi Bulan <?php echo $data['bulan']; ?> / <?php echo $data['tahun']; ?>
-							</td>
-						</tr>
-
-						<tr>
-							<th class="col-sm-2">Total Biaya</th>
-							<td>
-								: <?php echo rupiah($data['tagihan']); ?>
-							</td>
-						</tr>
-
-						<?php $tgl = $data['tgl_bayar']  ?>
-								<?php if($tgl == '0000-00-00'){ ?>
-								<span class="">	
-								</span>
-
-								<?php }elseif($tgl = $data['tgl_bayar']){ ?>
-								<tr>
-									<th>Tanggal Bayar</th>
-									<td>
-									<span class="">: <?php  $tgl = $data['tgl_bayar']; echo date("d F Y", strtotime($tgl))?></span>
-									</td>
-								</tr>
-									<?php } ?>
-</table>
 				</table>
-				<!-- /.box-body -->
-			</div>
-			<center>
+				<!-- /.box-header -->
 				<span class="">
-					<?php $stt = $data['status']  ?>
-								<?php if($stt == 'BL'){ ?>
-								<span class="">
-									<a href="../pelanggan/konfirmasi_byr.php?&id_tagihan=<?php echo $data['id_tagihan']; ?>" title="Konfirmasi"  class="btn btn-primary">
-											<i class="fa fa-money"></i> Konfirmasi pembayaran
-											</a>
-									<a href="../home/merchant/pembayaran.php?id_tagihan=<?php echo $data['id_tagihan']; ?>" title="Bayar"  class="btn btn-warning" style="font-size:16px;">
-									<i class="fa fa-dollar"></i> Bayar Sekarang
-									</a>
-								</span>
-								<?php }elseif($stt == 'LS'){ ?>
+					<?php $stt = $data['bukti_bayar']   ?>
+								<?php if($stt == ''){ ?>
+
+				<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+					<div class="box-body">
+						<div class="form-group">
+							<label class="col-sm-2">Kirim bukti :</label>
+							<div class="col-sm-10">
+								<input type="file" class="form-control" id="bukti_bayar" name="bukti_bayar" placeholder="bukti_bayar" autocomplete="off" onchange="previewBAYAR()" required>
+								<img id="preview_bayar" alt="image preview" width="30%" style="display:none" />
+							</div>
+						</div>	
+					</div>
+
+						<!-- /.box-body -->
+						<div class="box-footer">
+							<a href="../pelanggan/tagihan_plg.php?id_tagihan=<?php echo $data['id_tagihan']; ?>" class="btn btn-default">Batal</a>&emsp;
+							<input type="submit" name="Simpan" value="Konfirmasi" class="btn btn-success">
+						</div>
+				</form>
+
+				<?php }elseif($stt == 'LS'){ ?>
 								<span class="btn btn-success" style="font-size:16px;">
-									<i class="fa fa-money"></i> Anda Sudah Melunasi Tagihan
-								</span>
-								<span class="btn btn"style="font-size:16px;">
-									<a href="../struk/cetak_struk.php?id_tagihan=<?php echo $data['id_tagihan']; ?>" target=" _blank" title="Cetak Struk" class="btn btn-primary">
-									<i class="glyphicon glyphicon-print"></i> Download / Cetak Struk</a>
+									<i class="fa fa-money"></i> Anda Sudah Melakukan Konfirmasi Pembayaran
 								</span>
 					<?php } ?>
 					</a>
 				</span>
-
-			</center>
-		</div>
-	</div>
+				</div>
+				<!-- /.box -->
 </section>
+<script type="text/javascript">
+		//preview gambar
+		function previewBAYAR() {
+		document.getElementById("preview_bayar").style.display = "block";
+		var oFReader = new FileReader();
+		oFReader.readAsDataURL(document.getElementById("bukti_bayar").files[0]);
+	
+		oFReader.onload = function(oFREvent) {
+		document.getElementById("preview_bayar").src = oFREvent.target.result;
+		};
+		
+	};
+</script>
+
+<?php
+    if (isset ($_POST['Simpan'])){
+		
+			//kompress gambar
+			function compressImage($source, $destination, $quality) {
+				// Mendapatkan info gambar
+				$imgInfo = getimagesize($source);
+				$mime = $imgInfo['mime'];
+				 
+				// Membuat gambar baru dari file yang diupload
+				switch($mime){
+					case 'image/jpeg':
+						$image = imagecreatefromjpeg($source);
+						break;
+					case 'image/png':
+						$image = imagecreatefrompng($source);
+						break;
+					case 'image/gif':
+						$image = imagecreatefromgif($source);
+						break;
+					default:
+						$image = imagecreatefromjpeg($source);
+				}
+				 
+				// simpan gambar
+				imagejpeg($image, $destination, $quality);
+				 
+				// Return gambar yang dikompres
+				return $destination;
+			}
+			//menyimpan bukti bayar ke folder
+			//upload file ke server
+			$ekstensi_diperbolehkan     = array('jpg','png', 'JPG', 'PNG', 'jpeg', 'JPEG');
+			$bukti_bayar    			= $_FILES['bukti_bayar']['name'];
+			$x        					= explode('.', $bukti_bayar);
+			$ekstensi    				= strtolower(end($x));
+			$ukuran       				= $_FILES['bukti_bayar']['size'];
+			$namabarubayar 				= $data['nama']."_".$tanggal."_".$bukti_bayar;
+			$file_tmp    				= $_FILES['bukti_bayar']['tmp_name'];
+			//kompress gambar
+			$source_img 				= $file_tmp;
+			$destination_img 			= '../uploadfile/bukti_bayar/'.$namabarubayar;
+			$quality 					= 50;
+			compressImage($source_img, $destination_img, $quality);
+
+$sql_simpan = "INSERT INTO tb_tagihan_konfirmasi (id_konfirmasi, id_pelanggan, id_tagihan, bukti_bayar, tgl_konfirmasi) VALUES (
+           	'".$format."',
+           	'".$data['id_pelanggan']."',
+			'".$data['id_tagihan']."',
+		 	'".$namabarubayar."',
+			'".$tanggal."')";
+        $query_simpan = mysqli_query($koneksi, $sql_simpan);
+        mysqli_close($koneksi);
+
+    if ($query_simpan){
+        echo "<script>
+        Swal.fire({title: 'Konfirmasi Pembayaran Berhasil Disimpan, Data akan otomatis berubah saat admin sudah acc',text: '',icon: 'success',confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.value) {
+                window.location = '../pelanggan/tagihan_plg.php?&id_tagihan=$data[id_tagihan]';
+            }
+        })</script>";
+				//Info Update Data Telegram serverku
+				date_default_timezone_set('Asia/Jakarta');
+				$date = date('d F Y').'%20';
+				$time = date('H:i:s').'%0A';
+
+				$id_tagihan 		= $data['id_tagihan'].'%0A';
+				$nama 				= $data['nama'].'%0A';
+				$bulan 				= $data['bulan'].'%0A';
+				$tagihan 			= $data['tagihan'].'%0A';
+
+				$token = '1306451202:AAFL84nqcQjbAsEpRqVCziQ0VGty4qIAxt4';
+				$chat_id = '1136312864';
+				$message = 'Perlu konfirmasi pembayaran Kassandra WiFi%0A'.$date.$time.'%0AID tagihan : '.$id_tagihan.'Nama : '.$nama.'Bulan : '.$bulan.'Tagihan : '.$tagihan.'';
+				//$api = 'https://api.telegram.org/botTokenBotAnda/sendMessage?chat_id=xxxx&text='.$message.'';
+				$api = 'https://api.telegram.org/bot'.$token.'/sendMessage?chat_id='.$chat_id.'&text='.$message.'';
+
+
+				$ch = curl_init($api);
+					curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+					curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+					curl_setopt($ch, CURLOPT_URL, $api);
+					$result = curl_exec($ch);
+					curl_close($ch);
+					return $result;
+
+        }else{
+        echo "<script>
+        Swal.fire({title: 'Konfirmasi Pembayaran Gagal',text: '',icon: 'error',confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.value) {
+                window.location = '../pelanggan/konfirmasi_byr.php?&id_tagihan=$data[id_tagihan]';
+            }
+        })</script>";
+    }
+}
+
+?>
 </section>
 </section>
 <?php

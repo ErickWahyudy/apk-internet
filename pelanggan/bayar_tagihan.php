@@ -109,11 +109,13 @@ Tanggal 10 - Bulan <?php echo $data_cek['bulan']; ?> / <?php echo $data_cek['tah
 							<td>
 								: <?php echo rupiah($data_cek['tagihan']); ?>
 							</td>
-						</tr>
+						</tr>					
 
 						<?php $tgl = $data_cek['tgl_bayar']  ?>
 								<?php if($tgl == '0000-00-00'){ ?>
-								<span class=""></span>
+								<span class="">
+								</span>
+								
 								<?php }elseif($tgl = $data_cek['tgl_bayar']){ ?>
 								<tr>
 									<th>Tanggal Bayar</th>
@@ -122,15 +124,18 @@ Tanggal 10 - Bulan <?php echo $data_cek['bulan']; ?> / <?php echo $data_cek['tah
 									</td>
 								</tr>
 									<?php } ?>
-</table>
-				</table>
-				<!-- /.box-body -->
+						</table>
+
+<!-- /.box-body -->
 			</div>
 			<center>
 				<span class="">
 					<?php $stt = $data_cek['status']  ?>
 								<?php if($stt == 'BL'){ ?>
 								<span class="">
+								<a href="aplication.php?page=konfirmasi-pembayaran&kode=<?php echo $data_cek['id_tagihan']; ?>" title="Konfirmasi"  class="btn btn-primary">
+											<i class="fa fa-money"></i> Konfirmasi pembayaran
+											</a>
 									<a href="aplication.php?page=pembayaran" title="Bayar"  class="btn btn-warning" style="font-size:16px;">
 									<i class="fa fa-dollar"></i> Bayar Sekarang
 									</a>

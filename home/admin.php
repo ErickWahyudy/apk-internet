@@ -10,6 +10,13 @@
 		$paket=$data['paket'];
 	}
 
+	//konfirmasi pembayaran
+	$sql = $koneksi->query("SELECT count(id_konfirmasi) as konfirmasi from tb_tagihan_konfirmasi inner join tb_tagihan on tb_tagihan_konfirmasi.id_tagihan=tb_tagihan.id_tagihan where tb_tagihan.status='BL'");
+	while ($data= $sql->fetch_assoc()) {
+	
+		$konfirmasi=$data['konfirmasi'];
+	}
+
 	//pelanggan aktif
 	$sql = $koneksi->query("SELECT count(id_pelanggan) as huni from tb_pelanggan where status_plg='Aktif'");
 	while ($data= $sql->fetch_assoc()) {
@@ -154,6 +161,27 @@
 					<i class="ion-happy"></i>
 				</div>
 				<a href="?page=lunas-tagihan" class="small-box-footer">Cek info selengkapnya..
+					<i class="fa fa-arrow-circle-right"></i>
+				</a>
+			</div>
+		</div>
+
+		<div class="col-lg-3 col-xs-6">
+			<!-- small box -->
+			<div class="small-box bg-purple">
+				<div class="inner">
+					<h2>
+						<b>
+							<?= $konfirmasi; ?>
+						</b>
+					</h2>
+
+					<p>Butuh Konfirmasi</p>
+				</div>
+				<div class="icon">
+					<i class="fa fa-clock-o"></i>
+				</div>
+				<a href="?page=konfirmasi-pembayaran" class="small-box-footer">Cek info selengkapnya..
 					<i class="fa fa-arrow-circle-right"></i>
 				</a>
 			</div>
