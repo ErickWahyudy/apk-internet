@@ -29,7 +29,7 @@
 							<th>Bulan</th>
 							<th>Tagihan</th>
 							<th>Status</th>
-							<th>Bukti KTP</th>
+							<th>Bukti Bayar</th>
 							<th>Tanggal Konfirmasi</th>
 						</tr>
 					</thead>
