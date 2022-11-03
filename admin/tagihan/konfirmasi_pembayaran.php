@@ -38,7 +38,8 @@
 						<?php
                   $no = 1;
 				  $sql = $koneksi->query("SELECT p.id_pelanggan, p.nama, t.id_tagihan, t.tagihan, t.status, t.bulan, t.tahun, m.id_konfirmasi, m.bukti_bayar, m.tgl_konfirmasi
-				  from tb_pelanggan p inner join tb_tagihan t on p.id_pelanggan=t.id_pelanggan inner join tb_tagihan_konfirmasi m on t.id_tagihan=m.id_tagihan");
+				  from tb_pelanggan p inner join tb_tagihan t on p.id_pelanggan=t.id_pelanggan inner join tb_tagihan_konfirmasi m on t.id_tagihan=m.id_tagihan
+				  order by tgl_konfirmasi desc");
 				  while ($data= $sql->fetch_assoc()) {
 				  ?>
 
