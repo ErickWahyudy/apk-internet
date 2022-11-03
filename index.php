@@ -292,20 +292,19 @@
 						</a>
 					</li>
 
-
-					<li class="treeview">
-						<a href="?page=data-feedback">
-							<i class="fa fa-caret-square-o-up"></i>
-							<span>Feedback Pelanggan</span>
-							<span class="pull-right-container">
-							</span>
-						</a>
-					</li>
-
 					<li class="treeview">
 						<a href="?page=data-promo">
 							<i class="fa fa-whatsapp"></i>
 							<span>Pendaftar Promo</span>
+							<span class="pull-right-container">
+							</span>
+						</a>
+					</li>
+					
+					<li class="treeview">
+						<a href="?page=data-feedback">
+							<i class="fa fa-caret-square-o-up"></i>
+							<span>Feedback Pelanggan</span>
 							<span class="pull-right-container">
 							</span>
 						</a>

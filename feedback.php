@@ -127,12 +127,6 @@ $format = "F"."00".$tambah;
 							</div>
 						</div>
 
-						<div class="form-group">
-							<!-- Token dan ID Chat telegram erik -->
-							<input type="hidden" class="form-control" id="token" name="token" value="1306451202:AAFL84nqcQjbAsEpRqVCziQ0VGty4qIAxt4" >
-							<input type="hidden" class="form-control" id="chat_id" name="chat_id" value="1136312864" >
-						</div>
-
 						<!-- /.box-body -->
 						<div class="box-header">
 							<center>
@@ -207,8 +201,8 @@ function myFunction() {
 		$nilai 				= $_POST['nilai'].'%0A';
 		$feedback 				= $_POST['feedback'].'%0A';
 
-		$token = $_POST['token'];
-		$chat_id = $_POST['chat_id'];
+		$token = '1306451202:AAFL84nqcQjbAsEpRqVCziQ0VGty4qIAxt4';
+		$chat_id = '1136312864';
 		$message = 'Feedback Kassandra WiFi%0A'.$date.$time.'%0AID Feedback : '.$id_feedback.'Nama : '.$nama.'No HP : wa.me/'.$no_hp.'Nilai : '.$nilai.'Feedback : '.$feedback.'';
 		//$api = 'https://api.telegram.org/botTokenBotAnda/sendMessage?chat_id=xxxx&text='.$message.'';
 		$api = 'https://api.telegram.org/bot'.$token.'/sendMessage?chat_id='.$chat_id.'&text='.$message.'';

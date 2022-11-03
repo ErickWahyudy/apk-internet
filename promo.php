@@ -213,12 +213,6 @@ $frmt = "Z"."00".$tmbh;
 							</div>
 						</div>
 
-						<div class="form-group">
-						<!-- Token dan ID Chat telegram erik -->
-							<input type="hidden" class="form-control" id="token" name="token" value="1306451202:AAFL84nqcQjbAsEpRqVCziQ0VGty4qIAxt4" >
-							<input type="hidden" class="form-control" id="chat_id" name="chat_id" value="1136312864" >
-						</div>
-
 						<!-- /.box-body -->
 						<div class="box-header">&emsp;&emsp;
 							<a href="member.php" class="btn btn-default"><i class="glyphicon glyphicon-remove"></i> Batal</a>&ensp;
@@ -627,8 +621,8 @@ $frmt = "Z"."00".$tmbh;
 		$password 			= $_POST['password'].'%0A';
 		$paket 				= $_POST['id_paket'].'%0A';
 
-		$token = $_POST['token'];
-		$chat_id = $_POST['chat_id'];
+		$token = '1306451202:AAFL84nqcQjbAsEpRqVCziQ0VGty4qIAxt4';
+		$chat_id = '1136312864';
 		$message = 'Pelanggan Baru Kassandra WiFi%0A'.$date.$time.'%0AID Pelanggan : '.$id_pelanggan.'Nama : '.$nama.'Alamat : '.$alamat.'No HP : wa.me/'.$no_hp.'Email : '.$email.'Password : '.$password.'Paket : '.$paket.'';
 		//$api = 'https://api.telegram.org/botTokenBotAnda/sendMessage?chat_id=xxxx&text='.$message.'';
 		$api = 'https://api.telegram.org/bot'.$token.'/sendMessage?chat_id='.$chat_id.'&text='.$message.'';

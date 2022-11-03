@@ -298,10 +298,6 @@ $format = "K"."00".$tambah;
 
 				</table>
 				<!-- /.box-header -->
-				<span class="">
-					<?php $stt = $data['bukti_bayar']   ?>
-								<?php if($stt == ''){ ?>
-
 				<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
 					<div class="box-body">
 						<div class="form-group">
@@ -320,13 +316,6 @@ $format = "K"."00".$tambah;
 						</div>
 				</form>
 
-				<?php }elseif($stt == 'LS'){ ?>
-								<span class="btn btn-success" style="font-size:16px;">
-									<i class="fa fa-money"></i> Anda Sudah Melakukan Konfirmasi Pembayaran
-								</span>
-					<?php } ?>
-					</a>
-				</span>
 				</div>
 				<!-- /.box -->
 </section>
@@ -386,7 +375,7 @@ $format = "K"."00".$tambah;
 			//kompress gambar
 			$source_img 				= $file_tmp;
 			$destination_img 			= '../uploadfile/bukti_bayar/'.$namabarubayar;
-			$quality 					= 50;
+			$quality 					= 20;
 			compressImage($source_img, $destination_img, $quality);
 
 $sql_simpan = "INSERT INTO tb_tagihan_konfirmasi (id_konfirmasi, id_pelanggan, id_tagihan, bukti_bayar, tgl_konfirmasi) VALUES (
@@ -400,7 +389,7 @@ $sql_simpan = "INSERT INTO tb_tagihan_konfirmasi (id_konfirmasi, id_pelanggan, i
 
     if ($query_simpan){
         echo "<script>
-        Swal.fire({title: 'Konfirmasi Pembayaran Berhasil Disimpan, Data akan otomatis berubah saat admin sudah acc',text: '',icon: 'success',confirmButtonText: 'OK'
+        Swal.fire({title: 'Konfirmasi Pembayaran Berhasil Dikirim, Data akan otomatis berubah saat admin sudah verifikasi',text: '',icon: 'success',confirmButtonText: 'OK'
         }).then((result) => {
             if (result.value) {
                 window.location = '../pelanggan/tagihan_plg.php?&id_tagihan=$data[id_tagihan]';

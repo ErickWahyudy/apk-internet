@@ -150,7 +150,7 @@ function myFunction() {
 <?php
 
     if (isset ($_POST['Simpan'])){
-	  	//Info Update Data Telegram serverku
+//Info Update Data Telegram serverku
 		  date_default_timezone_set('Asia/Jakarta');
 		  $date = date('d F Y').'%20';
 		  $time = date('H:i:s').'%0A';
@@ -173,7 +173,6 @@ function myFunction() {
 			  curl_setopt($ch, CURLOPT_URL, $api);
 			  $result = curl_exec($ch);
 			  curl_close($ch);
-			  return $result;
 
     if ($result){
 
