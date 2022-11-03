@@ -106,7 +106,7 @@
 								Biaya Tagihan : <?php echo rupiah($data['tagihan']); ?>%0A
 								Sudah bisa dibayarkan mulai hari ini. Mohon melakukan pembayaran sebelum tgl 10 - <?php echo $bulan; ?> - <?php echo $tahun; ?> demi kenyamanan internet bersama.%0A%0A
 								Pembayaran dapat dilakukan secara Tunai maupun transfer Bank, ShopeePay, LinkAja, Dana, Alfamart atau platform digital lainnya.%0A%0A
-								Berikut kami sampaikan juga link pembayaran via transfer.%0A
+								Berikut kami sampaikan link pembayaran via transfer.%0A
 								https://wifi.kassandra.my.id/pelanggan/tagihan_plg.php?id_tagihan=<?php echo $data['id_tagihan']; ?>  %0A%0AAnda jg dapat melalukan konfirmasi pembayaran secara langsung melalui link berikut ini. %0A
 								https://wifi.kassandra.my.id/pelanggan/konfirmasi_byr.php?id_tagihan=<?php echo $data['id_tagihan']; ?> %0A%0A
 
@@ -122,7 +122,7 @@
 								Pembayaran dapat dilakukan secara Tunai maupun transfer Bank, ShopeePay, LinkAja, Dana, Alfamart atau platform digital lainnya. %0A
 								_Abaikan pesan jika sudah melakukan pembayaran.%20
 								Terima kasih._%0A%0A
-								Berikut kami sampaikan juga link pembayaran via transfer.%0A
+								Berikut kami sampaikan link pembayaran via transfer.%0A
 								https://wifi.kassandra.my.id/pelanggan/tagihan_plg.php?id_tagihan=<?php echo $data['id_tagihan']; ?>  %0A%0AAnda jg dapat melalukan konfirmasi pembayaran secara langsung melalui link berikut ini. %0A
                                 https://wifi.kassandra.my.id/pelanggan/konfirmasi_byr.php?id_tagihan=<?php echo $data['id_tagihan']; ?> %0A%0A
 								
