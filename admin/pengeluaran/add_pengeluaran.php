@@ -1,6 +1,6 @@
 <?php
 
-// membuat nomor antrian otomatis dengan format ANTRIAN-0001 reset tiap hari
+// membuat nomor antrian otomatis dengan format ANTRIAN-0001 reset tiap hari (untuk pasien)
 $today = date("Ymd");
 $last = $db->query("SELECT no_antrian FROM tb_pasien WHERE no_antrian LIKE '$today%' ORDER BY no_antrian DESC LIMIT 1");
 $last = $last->fetch_assoc();
