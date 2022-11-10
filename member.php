@@ -46,7 +46,7 @@ include "inc/koneksi.php";
 				<img src="dist/img/komp.png" width=170px />
 				<h4>
 					<b>
-						APLIKASI TAGIHAN INTERNET KASSANDRA WIFI
+						LOGIN KASSANDRA WIFI
 					</b>
 				</h4>
 				<BR>

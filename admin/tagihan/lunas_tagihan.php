@@ -110,7 +110,7 @@ while ($data= $sql->fetch_assoc()) {
 									Sebesar%20<?php echo rupiah($data['tagihan']); ?> pada tanggal <?php $data['tgl_bayar']; echo date("d F Y", strtotime($tgl)) ?>.%0A
 									Tetap nikmati layanan hotspot unlimited 24 jam non stop tanpa lemot kecuali saat wifi down dari KassandraWiFi.%0A%0A
 									Anda juga bisa mendownload ataupun melihat struk pembayaran lunas tagihan di aplikasi KassandraWiFi%0A
-									https://wifi.kassandra.my.id/pelanggan/tagihan_plg.php?id_tagihan=<?php echo $data['id_tagihan']; ?> %0A%0A
+									https://wifi.kassandra.my.id/pelanggan/tagihan_plg?id_tagihan=<?php echo $data['id_tagihan']; ?> %0A%0A
 									_Pesan ini dikirim otomatis oleh system aplikasi KassandraWifi._%0A
 									-wifi@kassandra.my.id-"
 								 	target=" _blank" title="Pesan WhatsApp" class="btn btn-success">

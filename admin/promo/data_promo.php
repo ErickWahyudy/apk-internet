@@ -42,7 +42,7 @@
 						<?php
                   $no = 1;
                   $sql = $koneksi->query("SELECT  a.id_pelanggan, a.nama, a.no_hp, a.alamat, b.id_promo, b.id_pelanggan, b.tgl_daftar, b.status , b.signature, b.bukti_ktp
-				  								FROM tb_pelanggan a, tb_promo b WHERE a.id_pelanggan=b.id_pelanggan");
+				  								FROM tb_pelanggan a, tb_promo b WHERE a.id_pelanggan=b.id_pelanggan order by tgl_daftar desc");
                   while ($data= $sql->fetch_assoc()) {
                 ?>
 

@@ -1,5 +1,16 @@
 <?php
 
+// membuat nomor antrian otomatis dengan format ANTRIAN-0001 reset tiap hari
+$today = date("Ymd");
+$last = $db->query("SELECT no_antrian FROM tb_pasien WHERE no_antrian LIKE '$today%' ORDER BY no_antrian DESC LIMIT 1");
+$last = $last->fetch_assoc();
+$last = $last['no_antrian'];
+$last = substr($last, 8, 4);
+$next = $last + 1;
+$next = str_pad($next, 4, "0", STR_PAD_LEFT);
+$next = "ANTRIAN-$today-$next";
+$no_antrian = $next;
+
 //kode
 $kode_tahun = date("Y");  
 

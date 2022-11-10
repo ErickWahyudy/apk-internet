@@ -13,13 +13,14 @@ include "../inc/rupiah.php";
 				$id = $_GET['id_tagihan'];
 
 				$no=1;
-				$sql_tampil = "SELECT p.id_pelanggan, p.nama, p.no_hp, p.alamat, t.id_tagihan, t.tagihan, t.status, t.tgl_bayar, t.bulan, t.tahun, k.id_paket, k.paket   
+				$sql_tampil = "SELECT p.id_pelanggan, p.nama, p.no_hp, p.alamat, t.id_tagihan, t.tagihan, t.status, t.tgl_bayar, t.bulan, t.tahun, k.id_paket, k.paket , b.id_bulan, b.bulan  
 				from tb_pelanggan p inner join tb_tagihan t on p.id_pelanggan=t.id_pelanggan 
-				inner join tb_paket k on k.id_paket=p.id_paket where id_tagihan='$id'";
+				inner join tb_paket k on k.id_paket=p.id_paket inner join tb_bulan b on b.id_bulan=t.bulan 
+				where id_tagihan='$id'";
 				$query_tampil = mysqli_query($koneksi, $sql_tampil);
 				while ($data = mysqli_fetch_array($query_tampil,MYSQLI_BOTH)) {
 				?>
-	<title>Aplikasi KassandraWiFi <?php echo $data['id_tagihan']; ?> <?php echo $data['nama']; ?></title>
+	<title>Nota KassandraWiFi Bulan <?php echo $data['bulan'];?> <?php echo $data['id_tagihan']; ?> <?php echo $data['nama']; ?></title>
 	<link rel="shortcut icon" href="../dist/img/favicon.ico" type="image/x-icon">
 </head>
 

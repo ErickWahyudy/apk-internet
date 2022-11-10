@@ -93,7 +93,7 @@
 									<?php }elseif($stt == 'LS'){ ?>LUNAS.<?php } ?>%0A
 									Tetap nikmati layanan hotspot unlimited 24 jam non stop tanpa lemot dari KassandraWiFi.%0A%0A
 									Anda juga bisa mendownload ataupun melihat struk total biaya anda di aplikasi KassandraWiFi%0A
-									https://wifi.kassandra.my.id/struk/cetak_struk_tagihan_lain.php?id_tagihan_lain=<?php echo $data['id_tagihan_lain']; ?> %0A%0A
+									https://wifi.kassandra.my.id/struk/cetak_struk_tagihan_lain?id_tagihan_lain=<?php echo $data['id_tagihan_lain']; ?> %0A%0A
 									_Pesan ini dikirim otomatis oleh system aplikasi KassandraWifi._%0A
 									-wifi@kassandra.my.id-"
 								 	target=" _blank" title="Pesan WhatsApp" class="btn btn-success">

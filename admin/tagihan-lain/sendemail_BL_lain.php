@@ -76,7 +76,7 @@ foreach ($result as $key => $data) { //mengirim email untuk setiap baris data
                            "<table><thead><tr>
                             <td style=font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;border-width:1px;border-style:dashed;border-color:rgb(37,63,89);background:lavender;color:rgb(0,0,0);font-size:16px;padding-left:1em;padding-right:1em>  ".
                            "<br>Berikut adalah total biaya ".$data['keterangan'] . " anda :".
-                           "<br><b>Rp. " .$data['tagihan']. "</b>".
+                           "<br><b>Rp. " . number_format($data['tagihan'], 0, ',', '.') . "</b>".
                            "<br>Pembayaran dapat dilakukan secara Tunai maupun transfer Bank, ShopeePay, LinkAja, Dana, Alfamart atau platform digital lainnya.
                            <br><br>Mohon segera melunasi biaya tersebut <b>sebelum tgl ".$deadline ."</b> demi kenyamanan internet bersama!" .
                            "<p align=center colspan=2 style=font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif>

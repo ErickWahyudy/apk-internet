@@ -49,6 +49,7 @@ require '../../email/PHPMailer/src/SMTP.php';
 require '../../email/PHPMailer/src/Exception.php';
 
 include "../../inc/koneksi.php"; //memulai koneksi ke database
+include "../../inc/rupiah.php";
 // Cek koneksi
 if (mysqli_connect_errno()) {
     echo "Koneksi database gagal : " . mysqli_connect_error();
@@ -75,7 +76,7 @@ foreach ($result as $key => $data) { //mengirim email untuk setiap baris data
                             <td style=font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;border-width:1px;border-style:dashed;border-color:rgb(37,63,89);background:lavender;color:rgb(0,0,0);font-size:16px;padding-left:1em;padding-right:1em>  ".
                             "<p style=font-size:18px>Pelanggan Yth. Sdr/i ".$data['nama']. " Ada tagihan hotspot
                             KassandraWiFi untuk Bulan ".$data['bulan'] . " / Tahun " .$data['tahun']. " yang belum dibayar.</p>".
-                           "Dengan rincian Biaya Tagihan : <br><b>Rp. ".$data['tagihan']. "</b>".
+                           "Dengan rincian Biaya Tagihan : <br><b>Rp. ".number_format($data['tagihan'], 0, ',', '.') . "</b>".
                            "<br>Pembayaran dapat dilakukan secara Tunai maupun transfer Bank, ShopeePay, LinkAja, Dana, Alfamart atau platform digital lainnya.
                            <br><br>Anda dapat melunasi pembayaran sebelum batas akhir pada tanggal 10 - ".$data['bulan'] . " - " .$data['tahun'] . 
                            ". Mari lunasi tagihan ini segera, demi kenyamanan internet bersama!
