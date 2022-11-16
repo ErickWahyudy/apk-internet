@@ -192,12 +192,12 @@ $format = "C"."00".$tambah;
 <?php
     if (isset ($_POST['Simpan'])){
 
-		include "koneksi.php"; //ini untuk masuk ke database
+		include "inc/koneksi.php"; //ini untuk masuk ke database
 		$cekdulu= "select * from tb_pelanggan where email='$_POST[email]'"; //email dan $_POST[un] diganti sesuai dengan yang kalian gunakan
 		$prosescek= mysqli_query($koneksi, $cekdulu);
 		if (mysqli_num_rows($prosescek)>0) { //proses mengingatkan data sudah ada
 			echo "<script>
-			Swal.fire({title: 'Akun Email Sudah Pernah Digunakan Mendaftar, Silakan Menggunakan Akun Email Lain',text: '',icon: 'error',confirmButtonText: 'OKE'
+			Swal.fire({title: 'Akun Email Sudah Pernah Digunakan Mendaftar, Silakan Menggunakan Akun Email Lain',text: '',icon: 'warning',confirmButtonText: 'OKE'
 			}).then((result) => {
 				if (result.value) {
 					window.location = 'register.php';
@@ -209,7 +209,7 @@ $format = "C"."00".$tambah;
 		$prosescek= mysqli_query($koneksi, $cekdulu);
 		if (mysqli_num_rows($prosescek)>0) { //proses mengingatkan data sudah ada
 			echo "<script>
-			Swal.fire({title: 'No HP Sudah Pernah Digunakan Mendaftar, Silakan Menggunakan No HP Lain',text: '',icon: 'error',confirmButtonText: 'OKE'
+			Swal.fire({title: 'No HP Sudah Pernah Digunakan Mendaftar, Silakan Menggunakan No HP Lain',text: '',icon: 'warning',confirmButtonText: 'OKE'
 			}).then((result) => {
 				if (result.value) {
 					window.location = 'register.php';

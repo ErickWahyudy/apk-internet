@@ -137,6 +137,21 @@ $format = "K"."00".$tambah;
 			$quality 					= 20;
 			compressImage($source_img, $destination_img, $quality);
 
+			//cek sudah pernah melakukan konfirmasi apa belum		
+		include "../inc/koneksi.php"; //ini untuk masuk ke database
+		$cekdulu= "select * from tb_tagihan_konfirmasi where bukti_bayar='$namabarubayar'"; //email dan $_POST[un] diganti sesuai dengan yang kalian gunakan
+		$prosescek= mysqli_query($koneksi, $cekdulu);
+		if (mysqli_num_rows($prosescek)>0) { //proses mengingatkan data sudah ada
+			echo "<script>
+			Swal.fire({title: 'Anda Sudah Mengupload Bukti Pembayaran, Silakan Menunggu Status Tagihan Akan Berubah',text: '',icon: 'warning',confirmButtonText: 'OKE'
+			}).then((result) => {
+				if (result.value) {
+					window.location = '../pelanggan/tagihan_plg.php?&id_tagihan=$data[id_tagihan]';
+				}
+			})</script>";
+		}
+		else {
+
 $sql_simpan = "INSERT INTO tb_tagihan_konfirmasi (id_konfirmasi, id_pelanggan, id_tagihan, bukti_bayar, tgl_konfirmasi) VALUES (
            	'".$format."',
            	'".$data_cek['id_pelanggan']."',

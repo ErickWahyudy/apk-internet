@@ -124,7 +124,7 @@
 								Terima kasih._%0A%0A
 								Berikut kami sampaikan link pembayaran via transfer.%0A
 								https://wifi.kassandra.my.id/pelanggan/tagihan_plg?id_tagihan=<?php echo $data['id_tagihan']; ?>  %0A%0AAnda jg dapat melakukan konfirmasi pembayaran secara langsung melalui link berikut ini. %0A
-                                https://wifi.kassandra.my.id/pelanggan/konfirmasi_byr?id_tagihan=<?php echo $data['id_tagihan']; ?> %0A%0A
+								https://wifi.kassandra.my.id/pelanggan/konfirmasi_byr?id_tagihan=<?php echo $data['id_tagihan']; ?> %0A%0A
 								
 								_Pesan ini dikirim otomatis oleh system aplikasi KassandraWiFi._%0A
 								-wifi@kassandra.my.id-" target=" _blank" title="Pesan WhatsApp" class="btn btn-success">

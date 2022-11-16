@@ -40,9 +40,9 @@
 </html>
 
 <?php
-$pinjam          = date("d M Y");
+$pinjam          = date("d F Y");
 $dua_hari        = mktime(0,0,0,date("n"),date("j")+2,date("Y"));
-$deadline        = date("d M Y", $dua_hari);
+$deadline        = date("d F Y", $dua_hari);
 
 require '../../email/PHPMailer/src/PHPMailer.php' ;
 require '../../email/PHPMailer/src/SMTP.php';

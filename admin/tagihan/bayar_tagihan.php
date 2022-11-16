@@ -57,8 +57,8 @@
                                     <td style=font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif;border-width:1px;border-style:dashed;border-color:rgb(37,63,89);background:lavender;color:rgb(0,0,0);font-size:16px;padding-left:1em;padding-right:1em>  ".
                                     "<p style=font-size:18px>Terima kasih Sdr/i ".$data['nama']. " sudah melakukan pembayaran tagihan hotspot
                                     KassandraWiFi untuk Bulan ".$data['bulan'] . " / Tahun " .$data['tahun']. "</p>".
-                                "Dengan rincian Biaya Tagihan : <br>Rp. ".$data['tagihan'].
-                                "<br>Tgl Pembayaran : ".$data['tgl_bayar']. "</br>".
+                                "Dengan rincian Biaya Tagihan : <br>Rp. ".number_format($data['tagihan'], 0, ',', '.') . 
+                                "<br>Tgl Pembayaran : ".date("d F Y", strtotime($data['tgl_bayar']))."<br>".
                                 "<br>Tetap nikmati layanan hotspot unlimited 24 jam non stop tanpa lemot kecuali saat wifi down
                                 <br><br> Berikut kami sampaikan juga nota pelunasan anda
                                 <p align=center colspan=2 style=font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif>
