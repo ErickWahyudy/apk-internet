@@ -40,7 +40,7 @@
 									<option value="wifi@kassandra.my.id">wifi@kassandra.my.id</option>
 									<option value="cs@kassandra.my.id">cs@kassandra.my.id</option>
 									<option value="kassandrawifi@kassandra.my.id">kassandrawifi@kassandra.my.id</option>
-									<option value="erikwahyudi@kassandra.my.id">erikwahyudi@kassandra.my.id</option>
+									<option value="erik@kassandra.my.id">erik@kassandra.my.id</option>
 								</select>
 							</div>
 						</div>

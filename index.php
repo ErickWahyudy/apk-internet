@@ -280,17 +280,17 @@
 						</a>
 					</li>
 
-					<li class="header">OTHER</li>
-
 					<li class="treeview">
 						<a href="?page=konfirmasi-pembayaran">
 							<i class="fa fa-money"></i>
 							<span>Konfirmasi Bayar</span>
-							<span class="label pull-right bg-red"><?= $konfirmasi; ?></span>
+							<span class="label pull-right bg-blue"><?= $konfirmasi; ?></span>
 							<span class="pull-right-container">
 							</span>
 						</a>
 					</li>
+
+					<li class="header">OTHER</li>
 
 					<li class="treeview">
 						<a href="?page=data-promo">
@@ -314,15 +314,6 @@
 						<a href="?page=data-informasi">
 							<i class="fa fa-bullhorn"></i>
 							<span>Layanan Informasi</span>
-							<span class="pull-right-container">
-							</span>
-						</a>
-					</li>
-
-					<li class="treeview">
-						<a href="?page=monitor-jaringan">
-							<i class="fa fa-rss"></i>
-							<span>Monitor Server Jaringan</span>
 							<span class="pull-right-container">
 							</span>
 						</a>

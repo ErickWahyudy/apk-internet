@@ -50,7 +50,7 @@
 								<?php echo $no++; ?>
 							</td>
 							<td>
-								<?php echo $data['id_pelanggan']; ?>
+								<?php echo $data['id_tagihan_lain']; ?>
 								-
 								<?php echo $data['nama']; ?>
 							</td>
