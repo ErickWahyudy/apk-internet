@@ -18,7 +18,7 @@ $format = "L"."00".$tambah;
 
 ?>
 <section class="content-header">
-	<h1 class="fa fa-tablet">
+	<h1 class="fa fa-calculator">
 		Data Tagihan Lainnya |
 		<small> 
 			<a href="?page=admin">Beranda</a> >
