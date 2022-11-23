@@ -20,7 +20,7 @@
 		$paket=$data['paket'];
 	}
 
-	$sql = $koneksi->query("SELECT count(id_pelanggan) as huni from tb_pelanggan");
+	$sql = $koneksi->query("SELECT count(id_pelanggan) as huni from tb_pelanggan where status_plg='Aktif'");
 	while ($data= $sql->fetch_assoc()) {
 	
 		$huni=$data['huni'];

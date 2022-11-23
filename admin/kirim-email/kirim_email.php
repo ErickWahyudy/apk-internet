@@ -26,7 +26,7 @@
 						<i class="fa fa-envelope"></i> Kirim Email Semua</a>
 					</div>
 					<div class="box-footer pull-right">
-						<a href="?page=kirim-email-umum" class="btn btn-warning">
+						<a href="?page=kirim-email-umum" class="btn btn-info">
 						<i class="fa fa-envelope"></i> Kirim Email Umum</a>
 					</div>
 				</div>

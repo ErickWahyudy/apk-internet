@@ -37,6 +37,7 @@
 							<label class="col-sm-2 control-label">Email Pengirim</label>
 							<div class="col-sm-6">
 								<select class="form-control select2" style="width: 100%;" name="email_pengirim" id="email_pengirim">
+									<option value="<?php echo $data_cek['email_pengirim']; ?>"><?php echo $data_cek['email_pengirim']; ?></option>
 									<option value="cs@kassandra.my.id">cs@kassandra.my.id</option>
 									<option value="wifi@kassandra.my.id">wifi@kassandra.my.id</option>
 									<option value="kassandrawifi@kassandra.my.id">kassandrawifi@kassandra.my.id</option>
@@ -111,6 +112,7 @@ if (isset ($_POST['Ubah'])){
     //mulai proses ubah
 		$sql_ubah = "UPDATE tb_email SET
 		nama_pengirim 			='".$_POST['nama_pengirim']."',
+		email_pengirim 			='".$_POST['email_pengirim']."',
 		subject 				='".$_POST['subject']."',
         isi_pesan 				='".$_POST['isi_pesan']."',
 		tanda_tangan 			='".$_POST['tanda_tangan']."'
