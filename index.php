@@ -211,7 +211,12 @@
 							<i class="fa fa-send"></i>
 							<span>Data Paket</span>
 							<span class="pull-right-container">
-							<span class="label pull-right bg-blue"><?= $paket; ?></span>
+							<?php $stt =  $paket ?>
+								<?php if($stt ==  $paket ){ ?>
+									<?php }if($stt == '0'){ ?>
+									<?php }elseif($stt ==  $paket ){ ?>
+									<span class="label bg-blue"><?=  $paket; ?></span>
+							<?php } ?>
 							</span>
 						</a>
 					</li>
@@ -222,7 +227,20 @@
 							<i class="fa fa-users"></i>
 							<span>Data Pelanggan</span>
 							<span class="pull-right-container">
-							<span class="label pull-right bg-yellow"><?= $huni; ?></span>
+							<?php $stt =  $huni ?>
+								<?php if($stt ==  $huni ){ ?>
+									<?php }if($stt == '0'){ ?>
+									<?php }elseif($stt ==  $huni ){ ?>
+									<span class="label bg-yellow"><?=  $huni; ?></span>
+							<?php } ?>
+							</span>
+						</a>
+					</li>
+					<li class="treeview">
+						<a href="?page=data-promo">
+							<i class="fa fa-whatsapp"></i>
+							<span>Pendaftar Promo</span>
+							<span class="pull-right-container">
 							</span>
 						</a>
 					</li>
@@ -243,7 +261,12 @@
 							<i class="fa fa-table"></i>
 							<span>Data Tagihan</span>
 							<span class="pull-right-container">
-							<span class="label pull-right bg-red"><?= $tagih; ?></span>
+							<?php $stt =  $tagih ?>
+								<?php if($stt ==  $tagih ){ ?>
+									<?php }if($stt == '0'){ ?>
+									<?php }elseif($stt ==  $tagih ){ ?>
+									<span class="label bg-red"><?=  $tagih; ?></span>
+							<?php } ?>
 							</span>
 						</a>
 					</li>
@@ -253,7 +276,12 @@
 							<i class="fa fa-money"></i>
 							<span>Pembayaran Lunas</span>
 							<span class="pull-right-container">
-							<span class="label pull-right bg-green"><?= $lunas; ?></span>
+							<?php $stt =  $lunas ?>
+								<?php if($stt ==  $lunas ){ ?>
+									<?php }if($stt == '0'){ ?>
+									<?php }elseif($stt ==  $lunas ){ ?>
+									<span class="label bg-green"><?=  $lunas; ?></span>
+							<?php } ?>
 							</span>
 						</a>
 					</li>
@@ -263,8 +291,18 @@
 							<i class="fa fa-calculator"></i>
 							<span>Tagihan lainnya</span>
 							<span class="pull-right-container">
-							<span class="label pull-right bg-green"><?= $lunasL; ?></span>
-							<span class="label pull-right bg-red"><?= $tagihL; ?></span>
+							<?php $stt = $tagihL ?>
+								<?php if($stt == $tagihL ){ ?>
+									<?php }if($stt == '0'){ ?>
+									<?php }elseif($stt == $tagihL ){ ?>
+									<span class="label bg-red"><?= $tagihL; ?></span>
+							<?php } ?>
+							<?php $stt =  $lunasL ?>
+								<?php if($stt ==  $lunasL ){ ?>
+									<?php }if($stt == '0'){ ?>
+									<?php }elseif($stt ==  $lunasL ){ ?>
+									<span class="label bg-green"><?=  $lunasL; ?></span>
+							<?php } ?>
 							</span>
 						</a>
 					</li>
@@ -274,8 +312,18 @@
 							<i class="fa fa-dollar"></i>
 							<span>Pengeluaran</span>
 							<span class="pull-right-container">
-							<span class="label pull-right bg-blue"><?= $lunasPL; ?></span>
-							<span class="label pull-right bg-red"><?= $tagihP; ?></span>
+							<?php $stt = $tagihP ?>
+								<?php if($stt == $tagihP ){ ?>
+									<?php }if($stt == '0'){ ?>
+									<?php }elseif($stt == $tagihP ){ ?>
+									<span class="label bg-red"><?= $tagihP; ?></span>
+							<?php } ?>
+							<?php $stt = $lunasPL ?>
+								<?php if($stt == $lunasPL ){ ?>
+									<?php }if($stt == '0'){ ?>
+									<?php }elseif($stt == $lunasPL ){ ?>
+									<span class="label bg-blue"><?= $lunasPL; ?></span>
+							<?php } ?>
 							</span>
 						</a>
 					</li>
@@ -284,22 +332,17 @@
 						<a href="?page=konfirmasi-pembayaran">
 							<i class="fa fa-money"></i>
 							<span>Konfirmasi Bayar</span>
-							<span class="label pull-right bg-blue"><?= $konfirmasi; ?></span>
 							<span class="pull-right-container">
+							<?php $stt = $konfirmasi  ?>
+								<?php if($stt == '0'){ ?>
+								<?php }elseif($stt == $konfirmasi){ ?>
+									<span class="label pull-right bg-blue"><?= $konfirmasi; ?></span>
+							<?php } ?>
 							</span>
 						</a>
 					</li>
 
 					<li class="header">OTHER</li>
-
-					<li class="treeview">
-						<a href="?page=data-promo">
-							<i class="fa fa-whatsapp"></i>
-							<span>Pendaftar Promo</span>
-							<span class="pull-right-container">
-							</span>
-						</a>
-					</li>
 					
 					<li class="treeview">
 						<a href="?page=data-feedback">

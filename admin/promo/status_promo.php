@@ -42,6 +42,12 @@
 						</div>
 
 						<div class="form-group">
+							<label>Biaya Pemasangan</label>
+							<input type='number' class="form-control" name="biaya_promo" value="<?php echo $data_cek['biaya_promo']; ?>"
+							/>
+						</div>
+
+						<div class="form-group">
 							<label>Status Promo</label>
 							<input type="text" class="form-control" name="status" value="<?php echo $data_cek['status']; ?>" readonly/>
 							<input type="radio" name="status" value="promo"/> Promo
@@ -64,6 +70,7 @@
 if (isset ($_POST['Ubah'])){
     //mulai proses ubah
 		$sql_ubah = "UPDATE tb_promo SET
+		biaya_promo='".$_POST['biaya_promo']."',
         status='".$_POST['status']."'
         WHERE id_promo	='".$_POST['id_promo']."'";
 

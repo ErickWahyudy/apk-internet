@@ -31,6 +31,13 @@
 		$tagih=$data['tagih_b'];
 	}
 
+	//tagihan lainnya blm bayar
+	$sql = $koneksi->query("SELECT count(id_tagihan_lain) as tagihL_b from tb_tagihan_lain where status='BL'");
+	while ($data= $sql->fetch_assoc()) {
+	
+		$tagihL=$data['tagihL_b'];
+	}
+
 	//tagihan lunas
 	$sql = $koneksi->query("SELECT count(id_tagihan) as tagih_l from tb_tagihan where status='LS'");
 	while ($data= $sql->fetch_assoc()) {
@@ -124,6 +131,10 @@
 			</div>
 		</div>
 
+<?php $stt =  $tagih ?>
+	<?php if($stt ==  $tagih ){ ?>
+		<?php }if($stt == '0'){ ?>
+		<?php }elseif($stt ==  $tagih ){ ?>
 		<div class="col-lg-3 col-xs-6">
 			<!-- small box -->
 			<div class="small-box bg-red">
@@ -134,7 +145,7 @@
 						</b>
 					</h2>
 
-					<p>Belum Bayar</p>
+					<p>Belum Bayar Bulanan</p>
 				</div>
 				<div class="icon">
 					<i class="ion-sad"></i>
@@ -144,30 +155,41 @@
 				</a>
 			</div>
 		</div>
+		<?php } ?>
 
+<?php $stt =  $tagihL ?>
+	<?php if($stt ==  $tagihL ){ ?>
+		<?php }if($stt == '0'){ ?>
+		<?php }elseif($stt ==  $tagihL ){ ?>
 		<div class="col-lg-3 col-xs-6">
 			<!-- small box -->
-			<div class="small-box bg-green">
+			<div class="small-box bg-red">
 				<div class="inner">
 					<h2>
 						<b>
-							<?= $lunas; ?>
+							<?= $tagihL; ?>
 						</b>
 					</h2>
 
-					<p>Lunas</p>
+					<p>Belum Bayar Tagihan Lain</p>
 				</div>
 				<div class="icon">
-					<i class="ion-happy"></i>
+					<i class="ion-sad"></i>
 				</div>
-				<a href="?page=lunas-tagihan" class="small-box-footer">Cek info selengkapnya..
+				<a href="?page=data-tagihan-lain" class="small-box-footer">Cek info selengkapnya..
 					<i class="fa fa-arrow-circle-right"></i>
 				</a>
 			</div>
 		</div>
+		<?php } ?>
 
+
+<!-- small box -->
+<?php $stt =  $konfirmasi ?>
+	<?php if($stt ==  $konfirmasi ){ ?>
+		<?php }if($stt == '0'){ ?>
+		<?php }elseif($stt ==  $konfirmasi ){ ?>
 		<div class="col-lg-3 col-xs-6">
-			<!-- small box -->
 			<div class="small-box bg-purple">
 				<div class="inner">
 					<h2>
@@ -185,7 +207,10 @@
 					<i class="fa fa-arrow-circle-right"></i>
 				</a>
 			</div>
-		</div>
+			</div>
+	<?php } ?>
+			
+
 
 		<div class="col-lg-3 col-xs-6">
 			<!-- small box -->

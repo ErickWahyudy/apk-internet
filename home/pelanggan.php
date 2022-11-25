@@ -43,6 +43,11 @@
 	<!-- Small boxes (Stat box) -->
 	<div class="row">
 
+
+<?php $stt =  $tagih ?>
+	<?php if($stt ==  $tagih ){ ?>
+		<?php }if($stt == '0'){ ?>
+		<?php }elseif($stt ==  $tagih ){ ?>
 		<div class="col-lg-3 col-xs-6">
 			<!-- small box -->
 			<div class="small-box bg-red">
@@ -63,7 +68,12 @@
 				</a>
 			</div>
 		</div>
+		<?php } ?>
 
+<?php $stt =   $tagih_lainB ?>
+	<?php if($stt ==   $tagih_lainB ){ ?>
+		<?php }if($stt == '0'){ ?>
+		<?php }elseif($stt ==   $tagih_lainB ){ ?>
 		<div class="col-lg-3 col-xs-6">
 			<!-- small box -->
 			<div class="small-box bg-orange">
@@ -84,27 +94,7 @@
 				</a>
 			</div>
 		</div>
-
-		<div class="col-lg-3 col-xs-6">
-			<!-- small box -->
-			<div class="small-box bg-green">
-				<div class="inner">
-					<h2>
-						<b>
-							<?= $lunas + $tagih_lainL; ?>
-						</b>
-					</h2>
-
-					<p>Lunas</p>
-				</div>
-				<div class="icon">
-					<i class="ion-happy"></i>
-				</div>
-				<a href="#" class="small-box-footer">Cek info selengkapnya..
-					<i class="fa fa-arrow-circle-right"></i>
-				</a>
-			</div>
-		</div>
+		<?php } ?>
 
 		<div class="col-lg-3 col-xs-6">
 			<!-- small box -->

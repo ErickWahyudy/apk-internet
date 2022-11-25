@@ -270,8 +270,8 @@ $frmt = "Z"."00".$tmbh;
                         <i class="fa fa-certificate fa-4x text-primary mb-4"></i>
                         <h5 class="mb-3">Biaya Pemasangan</h5>
                        
-						<h4 class="mb-3"><del style="color:red">Rp. 350.000</del></h4>
-                        <h4 class="mb-3">Rp. 200.000 !!</h4>
+						<h4 class="mb-3"><del style="color:red">Rp. 350.000,00</del></h4>
+                        <h4 class="mb-3"><?php echo rupiah($data['biaya_promo']); ?></h4>
                         <h6 class="text-muted"><small>S&k berlaku</small></h6>
                     </div>
                 </div>
