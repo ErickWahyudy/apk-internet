@@ -336,7 +336,7 @@ $(window).on('load',function(){
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h6 class="section-title bg-white text-center text-primary px-3">Register Us</h6>
-                <p class="text-center mb-4">*Siapkan KTP / SIM / Paspor / Identitas asli untuk melengkapi persyaratan pendaftaran</p>
+                <p class="text-center mb-4">*Siapkan KTP / SIM / Paspor / Identitas asli lainnya untuk melengkapi persyaratan pendaftaran</p>
             </div>
             <div class="row g-0 justify-content-center">
                 <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.5s">
