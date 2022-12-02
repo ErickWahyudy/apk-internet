@@ -351,7 +351,7 @@ $(window).on('load',function(){
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" id="no_hp" name="no_hp" placeholder="No HP / WA" autocomplete="off" required>
+                                    <input type="number" class="form-control" id="no_hp" name="no_hp" value="62" placeholder="No HP / WA" autocomplete="off" required>
                                     <label for="no_hp">Nomor HP / WA</label>
                                 </div>
                             </div>
@@ -404,6 +404,11 @@ $(window).on('load',function(){
                                     <textarea id="signature64" name="signed" style="display: none" required></textarea> <br>
                                     <button id="clear" class="btn-warning">ulangi ttd</button>
                                     <label for="signature">Tanda Tangan</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                <input type="checkbox" required> Saya memastikan data yang saya tuliskan sudah benar 
                                 </div>
                             </div>
                             <div class="col-12 text-center">
