@@ -7,7 +7,7 @@
     }
 ?>
 <section class="content-header">
-	<h1 class="fa fa-whatsapp">
+	<h1 class="fa fa-creative-commons">
 		Layanan Lapor Kendala |
 		<small> 
 			<a href="?page=admin">Beranda</a> >

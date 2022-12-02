@@ -26,6 +26,15 @@
 		$huni=$data['huni'];
 	}
 
+	//pendaftar promo
+	$sql = $koneksi->query("SELECT count(id_promo) as promo from tb_promo");
+	while ($data= $sql->fetch_assoc()) {
+	
+		$promo=$data['promo'];
+		//mengurangi satu karena promo default
+		$promo=$promo-1;
+	}
+
 	$sql = $koneksi->query("SELECT count(id_tagihan) as tagih_b from tb_tagihan where status='BL'");
 	while ($data= $sql->fetch_assoc()) {
 	
@@ -100,6 +109,13 @@
 	<link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
 
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	<script src="dist/js/jquery-latest.js"></script>
+	<!-- <script>
+	var refreshId = setInterval(function()
+	{
+	$('#responsecontainer').load('./home/admin.php');
+	}, 1000);
+	</script> -->
 </head>
 
 <body class="hold-transition skin-purple sidebar-mini">
@@ -125,14 +141,78 @@
 					<span class="icon-bar"></span>
 				</a>
 
-					<div class="navbar-custom-menu">
-      <ul class="nav navbar-nav">
+
+<div class="navbar-custom-menu">
+	<ul class="nav navbar-nav">
+		<?php $stt = $tagih + $tagihL + $tagihP + $konfirmasi ?>
+		<?php if($stt == $tagih + $tagihL + $tagihP + $konfirmasi ){ ?>
+			<?php }if($stt == '0'){ ?>
+		<?php }elseif($stt == $tagih + $tagihL + $tagihP + $konfirmasi ){ ?>
+		<li class="dropdown notifications-menu">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			<i class="fa fa-bell-o"></i>
+			<span class="label label-warning">
+				<?= $tagih + $tagihL + $tagihP + $konfirmasi; ?>	
+			</span>
+			</a>
+	<ul class="dropdown-menu">
+		<li class="header">Ada <?= $tagih + $tagihL + $tagihP + $konfirmasi; ?> pemberitahuan</li>
+		<?php } ?>	
+		<li>
+			<ul class="menu">
+				<?php $stt = $tagih || $stt = $tagihL || $stt = $tagihP || $stt = $konfirmasi ?>
+					<?php if($stt == $tagih ){ ?>
+						<?php }if($stt == '0'){ ?>
+					<?php }elseif($stt == $tagih ){ ?>
+						<li>
+							<a href="index.php?page=buka-tagihan">
+								<i class="fa fa-table text-aqua"></i> <?= $tagih; ?> Tagihan bulanan
+							</a>
+						</li>
+
+					<?php }if($stt == $tagihL ){ ?>
+						<?php }if($stt == '0'){ ?>
+					<?php }elseif($stt == $tagihL ){ ?>
+						<li>
+							<a href="index.php?page=data-tagihan-lain">
+								<i class="fa fa-calculator text-aqua"></i> <?= $tagihL; ?> Tagihan lainnya blm dibayar
+							</a>
+						</li>
+
+					<?php }if($stt == $tagihP ){ ?>
+						<?php }if($stt == '0'){ ?>
+					<?php }elseif($stt == $tagihP ){ ?>
+						<li>
+							<a href="index.php?page=data-pengeluaran">
+								<i class="fa fa-dollar text-aqua"></i> <?= $tagihP; ?> Tagihan pengeluaran blm dibayar
+							</a>
+						</li>
+
+					<?php }if($stt == $konfirmasi ){ ?>
+						<?php }if($stt == '0'){ ?>
+					<?php }elseif($stt == $konfirmasi ){ ?>
+						<li>
+							<a href="index.php?page=konfirmasi-pembayaran">
+								<i class="fa fa-money text-aqua"></i> <?= $konfirmasi; ?> Perlu konfirmasi pembayaran
+							</a>
+						</li>	
+			
+					<?php } ?>			
+			</ul>
+		</li>
+	</ul>
+</li>
+</ul>
+		
+
+	<ul class="nav navbar-nav">
         <!-- User Account: style can be found in dropdown.less -->
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
            <img src="dist/img/komp.png" class="user-image" alt="User Image">
             <span class="hidden-xs"><?php echo $data_nama; ?></span>
           </a>
+		  
           <ul class="dropdown-menu">
             <!-- User image -->
             <li class="user-header">
@@ -238,9 +318,15 @@
 					</li>
 					<li class="treeview">
 						<a href="?page=data-promo">
-							<i class="fa fa-whatsapp"></i>
+							<i class="fa fa-creative-commons"></i>
 							<span>Pendaftar Promo</span>
 							<span class="pull-right-container">
+							<?php $stt =  $promo ?>
+								<?php if($stt ==  $promo ){ ?>
+									<?php }if($stt == '0'){ ?>
+									<?php }elseif($stt ==  $promo ){ ?>
+									<span class="label bg-yellow"><?=  $promo; ?></span>
+							<?php } ?>
 							</span>
 						</a>
 					</li>
@@ -581,10 +667,10 @@
                   include "admin/feedback/del_feedback.php";
 				break;
 
-		 //monitor_jaringan
-		 	case 'monitor-jaringan':
-				 include "admin/monitor-jaringan/monitor_jaringan.php";
-			  	 break;
+		 //kirim_pesan
+		 	// case 'kirim-wa':
+			// 	 include "admin/kirim-wa/kirim_wa.php";
+			//    	break;
 			case 'kirim-email':
 				 include "admin/kirim-email/kirim_email.php";
 			   	break;

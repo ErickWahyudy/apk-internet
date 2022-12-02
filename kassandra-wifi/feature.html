@@ -338,9 +338,8 @@
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5" type="text"
-                            placeholder="Your email">
-                        <button type="button"
-                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                            placeholder="any question ?" readonly>
+                        <a href="contact.html" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">klik..</a>
                     </div>
                 </div>
             </div>
@@ -382,16 +381,10 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script type="text/javascript">
-        // 1 detik = 1000
-        window.setTimeout("waktu()",1000);  
-        function waktu() {   
-        var tanggal = new Date();  
-        setTimeout("waktu()",1000);  
-        document.getElementById("jam").innerHTML = tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds();
-        }
+        // info tahun
         var tahun = new Date().getFullYear();
         document.getElementById("tahun").innerHTML = tahun;
-        </script>
+    </script>
 </body>
 
 </html>

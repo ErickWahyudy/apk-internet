@@ -278,16 +278,10 @@
     <script src="./kassandra-wifi/js/main.js"></script>
 
     <script type="text/javascript">
-        // 1 detik = 1000
-        window.setTimeout("waktu()",1000);  
-        function waktu() {   
-        var tanggal = new Date();  
-        setTimeout("waktu()",1000);  
-        document.getElementById("jam").innerHTML = tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds();
-        }
+        // info tahun
         var tahun = new Date().getFullYear();
         document.getElementById("tahun").innerHTML = tahun;
-        </script>
+    </script>
 </body>
 
 </html>

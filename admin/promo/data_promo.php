@@ -1,5 +1,5 @@
 <section class="content-header">
-	<h1 class="fa fa-whatsapp">
+	<h1 class="fa fa-creative-commons">
 		Data Pelanggan Daftar Promo Pemasangan |
 		<small> 
 			<a href="?page=admin">Beranda</a> >
