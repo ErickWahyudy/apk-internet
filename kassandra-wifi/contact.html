@@ -142,6 +142,8 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
+                        <a href="../feedback.php" class="dropdown-item">Feedback</a>
+                        <a href="../lapor.php" class="dropdown-item">Lapor ada kendala</a>
                         <a href="feature.html" class="dropdown-item">Features</a>
                         <a href="team.html" class="dropdown-item">Our Team</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
@@ -196,38 +198,30 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="nama" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+                                    <input type="text" class="form-control" id="nama" name="nama" placeholder="name@example.com" autocomplete="off" required>
+                                    <label for="nama">Nama Lengkap</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" id="nomor" placeholder="Your Number">
-                                    <label for="number">Your Number</label>
+                                    <input type="number" class="form-control" id="no_hp" name="no_hp" placeholder="No HP / WA" value="62" autocomplete="off" required>
+                                    <label for="no_hp">Nomor HP / WA</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat" required>
+                                    <label for="alamat">Alamat</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="alamat" placeholder="Your Address">
-                                    <label for="address">Your Address</label>
+                                    <textarea type="text" style="height: 100pt;" class="form-control" id="pesan" name="pesan" placeholder="Tuliskan pesan kamu" required></textarea>
+                                    <label for="lapor">Tuliskan Pesan Kamu</label>
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="pesan"
-                                        style="height: 200px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
+                            </div>    
                             <div class="col-12 text-center">
-                                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Send
-                                    Message</button>
+                                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Kirim pesan</button>
                             </div>
                         </div>
                     </form>

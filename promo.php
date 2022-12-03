@@ -394,15 +394,15 @@ $(window).on('load',function(){
                                 </div>
                             </div>
                             <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="file" class="form-control" id="bukti_ktp" name="bukti_ktp" placeholder="bukti_ktp" autocomplete="off" onchange="previewKTP()" required>
-								    <img id="preview_ktp" alt="image preview" width="50%" />
-                                    <label for="bukti_ktp">Upload Bukti (terlihat jelas)</label>
+                                <div class="input-group">
+                                    <input type="file" class="form-control" style="background-color: white;" id="bukti_ktp" name="bukti_ktp" placeholder="bukti_ktp" autocomplete="off" onchange="previewKTP()" required>
+                                    <label class="input-group-text" style="background-color: white;" for="bukti_ktp">Upload Bukti (foto terlihat jelas yaa)</label>
                                 </div>
+                                <img id="preview_ktp" alt="image preview" width="50%" />
                             </div>
                             <div class="col-12">
                                 <div class="form-floating" >
-                                    <div id="sig" style="border: 2px solid rgb(66, 63, 63);" required></div>
+                                    <div id="sig" style="border: 2px solid #E5E4E2; border-radius: 4px;" required></div>
                                     <textarea id="signature64" name="signed" style="display: none" required></textarea> <br>
                                     <button id="clear" class="btn-warning">ulangi ttd</button>
                                     <label for="signature">Tanda Tangan</label>

@@ -1,198 +1,362 @@
-<?php
-	include "inc/koneksi.php";
-	include "inc/akses.php";
-	include "inc/acak_id.php";
-?>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="keywords" content="wifi kassandra my id, kassandra my id, kassandra, kassandra hd production, KASSANDRA, KASSANDRA HD PRODUCTION">
-    <meta name="description" content="Layanan hotspot wifi unlimited 24 jam non stop tanpa lemot kecuali saat wifi down">
- 	<meta name="author" content="KASSANDRA, KASSANDRA HD PRODUCTION">
-    <meta content='index,follow' name='robots'/>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Lapor KASSANDRA WIFI</title>
-	<link rel="shortcut icon" href="dist/img/favicon.ico" type="image/x-icon">
-	<!-- Tell the browser to be responsive to screen width -->
-	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-	<!-- Bootstrap 3.3.6 -->
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-	<!-- Ionicons -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-	<!-- DataTables -->
-	<link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
-	<!-- Select2 -->
-	<link rel="stylesheet" href="plugins/select2/select2.min.css">
-	<!-- Theme style -->
-	<link rel="stylesheet" href="dist/css/AdminLTE.min.css">
-	<!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
-	<link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <meta charset="utf-8">
+    <title>KASSANDRAWIFI</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="keywords"
+        content="wifi kassandra my id, kassandra my id, kassandra wifi, kassandra, kassandra hd production, KASSANDRA, KASSANDRA HD PRODUCTION">
+    <meta name="description"
+        content="Layanan hotspot wifi unlimited 24 jam non stop tanpa lemot kecuali saat wifi down">
+    <meta name="author" content="KASSANDRA, KASSANDRA HD PRODUCTION">
+    <meta content='index,follow' name='robots' />
 
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <!-- Favicon -->
+    <link href="kassandra-wifi/img/favicon.ico" rel="icon">
 
-	<div align="center"><noscript>
-	<div style="position:fixed; top:0px; left:0px; z-index:3000; height:100%; width:100%; background-color:#FFFFFF">
-	<div style="font-family: Arial; font-size: 17px; background-color:#00bbf9; padding: 11pt;">Mohon aktifkan javascript pada browser untuk mengakses halaman ini! <br>
-	Hak web milik kassandra.my.id | Kassandra Production | All rights reserved.
-	</div></div>
-	</noscript></div>
-	<script type="text/javascript">
-	function disableSelection(e){if(typeof e.onselectstart!="undefined")e.onselectstart=function(){return false};else if(typeof e.style.MozUserSelect!="undefined")e.style.MozUserSelect="none";else e.onmousedown=function(){return false};e.style.cursor="default"}window.onload=function(){disableSelection(document.body)}
-	</script>
-	
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="kassandra-wifi/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="kassandra-wifi/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="kassandra-wifi/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="kassandra-wifi/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="kassandra-wifi/css/style.css" rel="stylesheet">
 </head>
 
-<body class="hold-transition" background="dist/img/bkg.jpg">
-	
-<?php
-//kode
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status">
+        </div>
+        <i class="fa fa-wifi fa-2x text-primary position-absolute top-50 start-50 translate-middle"></i>
+    </div>
+    <!-- Spinner End -->
 
-$tanggal = date("Y-m-d");
 
-?>
+    <!-- Topbar Start -->
+    <!-- <div class="container-fluid bg-light px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a class="small text-secondary" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="small text-secondary" href="#">Career</a></li>
+                    <li class="breadcrumb-item"><a class="small text-secondary" href="#">Terms</a></li>
+                    <li class="breadcrumb-item"><a class="small text-secondary" href="#">Privacy</a></li>
+                </ol>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn-square text-primary border-end rounded-0" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn-square text-primary border-end rounded-0" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn-square text-primary border-end rounded-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn-square text-primary pe-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Topbar End -->
 
 
-<center>
-	<section class="content-header">
-	<h1 class="ion-person-stalker">
-		<b>LAPOR KENDALA KASSANDRAWIFI</b>
-	</h1>
-	</section>
-</center>
+    <!-- Brand & Contact Start -->
+    <div class="container-fluid py-4 px-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row align-items-center top-bar">
+            <div class="col-lg-4 col-md-12 text-center text-lg-start">
+                <a href="" class="navbar-brand m-0 p-0">
+                    <h1 class="fw-bold text-primary m-0"><i class="fa fa-wifi" aria-hidden="true"></i> KASSANDRAWIFI
+                    </h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+            </div>
+            <div class="col-lg-8 col-md-7 d-none d-lg-block">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <div class="flex-shrink-0 btn-lg-square border rounded-circle">
+                                <i class="far fa-clock text-primary"></i>
+                            </div>
+                            <div class="ps-3">
+                                <p class="mb-2">Jam layanan</p>
+                                <h6 class="mb-0">Senin - Jum'at, <br> 08:00 a.m - 16:00 p.m</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <div class="flex-shrink-0 btn-lg-square border rounded-circle">
+                                <i class="fa fa-phone text-primary"></i>
+                            </div>
+                            <div class="ps-3">
+                                <p class="mb-2">Call Us</p>
+                                <h6 class="mb-0"><a href="https://wa.me/6281456141227">0814 - 5614 - 1227</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <div class="flex-shrink-0 btn-lg-square border rounded-circle">
+                                <i class="far fa-envelope text-primary"></i>
+                            </div>
+                            <div class="ps-3">
+                                <p class="mb-2">Email Us</p>
+                                <h6 class="mb-0"><a href="mailto:wifi@kassandra.my.id">wifi@kassandra.my.id</a></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Brand & Contact End -->
 
-<section class="content">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="box box-primary">
-				<div class="box-header with-border">
-					<h3 class="box-title">Lapor Kendala KassandraWiFi</h3>
-				</div>
 
-				<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
-					<div class="box-body">
-						<div class="form-group">
-							<label class="col-sm-2 control-label">Nama Lengkap</label>
-							<div class="col-sm-6">
-								<input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap" autocomplete="off" required>
-							</div>
-						</div>
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg bg-primary navbar-dark sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="#" class="navbar-brand ms-3 d-lg-none">MENU</a>
+        <button type="button" class="navbar-toggler me-3" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav me-auto p-3 p-lg-0">
+                <a href="landingpage.php" class="nav-item nav-link ">Home</a>
+                <a href="promo.php" class="nav-item nav-link">Promo</a>
+                <a href="./kassandra-wifi/about.html" class="nav-item nav-link">About Us</a>
+                <a href="./kassandra-wifi/service.html" class="nav-item nav-link">Services</a>
+                <a href="./kassandra-wifi/project.html" class="nav-item nav-link">Projects</a>
+                <a href="speedtest.php" class="nav-item nav-link">Speedtest</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
+                        <a href="feedback.php" class="dropdown-item">Feedback</a>
+                        <a href="lapor.php" class="dropdown-item active">Lapor ada kendala</a>
+                        <a href="./kassandra-wifi/feature.html" class="dropdown-item">Features</a>
+                        <a href="./kassandra-wifi/team.html" class="dropdown-item">Our Team</a>
+                        <a href="./kassandra-wifi/testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="./kassandra-wifi/404.html" class="dropdown-item">404 Page</a>
+                    </div>
+                </div>
+                <a href="./kassandra-wifi/contact.html" class="nav-item nav-link">Contact Us</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Login Aplikasi</a>
+                    <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
+                        <a href="member.php" target="" class="dropdown-item">Members</a>
+                        <a href="login.php" target="" class="dropdown-item">Our Team</a>
+                    </div>
+                </div>
+            </div>
+            <a href="register.php" target="" class="btn btn-sm btn-light rounded-pill py-2 px-4">Daftar sekarang ?</a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
 
-						<div class="form-group">
-							<label class="col-sm-2 control-label">No HP / WA atau Email</label>
-							<div class="col-sm-6">
-								<input type="text" class="form-control" id="no_hp" name="no_hp" placeholder="No HP / WA atau Email" autocomplete="off" required>
-							</div>
-						</div>
 
-						<div class="form-group">
-							<label class="col-sm-2 control-label">Kendala yang ingin dilaporkan</label>
-							<div class="col-sm-6">
-								<textarea type="text" style="height: 100pt;" class="form-control" id="kendala" name="kendala" placeholder="Tulis kendala yang ingin dilaporkan" autocomplete="off" required></textarea>
-							</div>
-						</div>
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="display-4 text-white animated slideInDown mb-3">Contact</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Contact</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
 
-						<div class="form-group">
-							<div class="col-sm-6 control-label">
-								<input type="checkbox" class="control" id="checkbox" name="checkbox" placeholder="checkbox" autocomplete="off" required> Saya memastikan data yang saya tuliskan di form sudah benar
-							</div>
-						</div>
 
-						<div class="form-group">
-							<!-- Token dan ID Chat telegram erik -->
-							<input type="hidden" class="form-control" id="token" name="token" value="1306451202:AAFL84nqcQjbAsEpRqVCziQ0VGty4qIAxt4" >
-							<input type="hidden" class="form-control" id="chat_id" name="chat_id" value="1136312864" >
-						</div>
+    <!-- Contact Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
+                <p class="text-center mb-4">Tuliskan kendala anda di bawah ini, kami akan segera meresponnya.</p>
+            </div>
+            <div class="row g-0 justify-content-center">
+                <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.5s">
+                    <form action="javascript:chat();" method="post">
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="nama" name="nama" placeholder="name@example.com" autocomplete="off" required>
+                                    <label for="nama">Nama Lengkap</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="no_hp" name="no_hp" placeholder="No HP / WA" value="62" autocomplete="off" required>
+                                    <label for="no_hp">Nomor HP / WA</label>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat" required>
+                                    <label for="alamat">Alamat</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea type="text" style="height: 100pt;" class="form-control" id="pesan" name="pesan" placeholder="Tuliskan apa yang sudah baik dan perlu ditingkatkan lagi" required></textarea>
+                                    <label for="lapor">Tuliskan kendala apa yang ingin dilaporkan</label>
+                                </div>
+                            </div>    
+                            <div class="col-12 text-center">
+                                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Kirim laporan</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+    <div id="confirm" class="modal fade" role="dialog" data-backdrop="static">
+        <div class="modal-dialog modal-sm">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body text-center">
+                <p></p>
+              <p style="font-size: 16px">Pesan Anda berhasil terkirim, silahkan klik OK untuk melanjutkan.</p>
+              <p style="font-size: 14px"><a href="../landingpage.php"><button class="btn btn-success beli">OK</button></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="kassandra-wifi/js/bootstrapiklan.min.js"></script>
+  <script src="kassandra-wifi/js/chat.js"></script>
+  <script src="kassandra-wifi/js/jqueryiklan.min.js"></script>
 
-						<!-- /.box-body -->
-						<div class="box-header">&emsp;&emsp;
-							<a href="member.php" class="btn btn-default"><i class="glyphicon glyphicon-remove"></i> Batal</a>&ensp;
-							<input type="submit" name="Simpan" value="Kirim laporan" class="btn btn-primary">
-						</div>
-				</form>
-				</div>
-				<footer class="box-footer">
-					<div class="pull-right hidden-xs">
-					</div>
-						<center>
-						<strong>Copyright &copy; 2019 - <?php echo date('Y'); ?>
-						<a href="https://bit.ly/kassandrahdproduction" target="blank">KassandraWifi</a>.</strong> All rights reserved.
-						</center>
-				</footer>
-			</div>
-		</div>
-</section>
 
-	<!-- jQuery 2.2.3 -->
-	<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
-	<!-- Bootstrap 3.3.6 -->
-	<script src="bootstrap/js/bootstrap.min.js"></script>
-	<!-- iCheck -->
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-	<!-- sweet alert -->
+     <!-- Google Map Start -->
+     <div class="container-xxl pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+        <iframe class="w-100 mb-n2" style="height: 450px;"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252881.1514391924!2d111.52941495!3d-7.9712315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e790b859cfee851%3A0x3027a76e352bea0!2sKabupaten%20Ponorogo%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1669501949328!5m2!1sid!2sid"
+            frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <!-- Google Map End -->
 
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Address</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Ponorogo, Indonesia. 634 61</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>0814 - 5614 - 1227</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>wifi@kassandra.my.id</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-1" href=""><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-1" href=""><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-1" href=""><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-0" href=""><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Gallery</h5>
+                    <div class="row g-2">
+                        <div class="col-4">
+                            <img class="img-fluid rounded" src="img/1.jpg" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid rounded" src="img/2.jpg" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid rounded" src="img/3.jpg" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid rounded" src="img/4.jpg" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid rounded" src="img/5.jpg" alt="Image">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid rounded" src="img/6.jpg" alt="Image">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Newsletter</h5>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5" type="text"
+                            placeholder="any question ?" readonly>
+                        <a href="contact.html" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">klik..</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <span id="tahun"></span> <a href="#">KASSANDRAWIFI</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                        <br>Distributed By: <a class="border-bottom" href="https://themewagon.com"
+                            target="_blank">ThemeWagon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="kassandra-wifi/lib/wow/wow.min.js"></script>
+    <script src="kassandra-wifi/lib/easing/easing.min.js"></script>
+    <script src="kassandra-wifi/lib/waypoints/waypoints.min.js"></script>
+    <script src="kassandra-wifi/lib/counterup/counterup.min.js"></script>
+    <script src="kassandra-wifi/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="kassandra-wifi/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="kassandra-wifi/js/main.js"></script>
+    <script type="text/javascript">
+        // info tahun
+        var tahun = new Date().getFullYear();
+        document.getElementById("tahun").innerHTML = tahun;
+    </script>
 </body>
 
 </html>
-
-<script>
-function myFunction() {
-    var x = document.getElementById("email");
-    x.value = x.value.toLowerCase();
-}
-</script>
-
-<?php
-
-    if (isset ($_POST['Simpan'])){
-//Info Update Data Telegram serverku
-		  date_default_timezone_set('Asia/Jakarta');
-		  $date = date('d F Y').'%20';
-		  $time = date('H:i:s').'%0A';
-  
-		  $id_lapor 			= $kode.'%0A';
-		  $nama 				= $_POST['nama'].'%0A';
-		  $no_hp 				= $_POST['no_hp'].'%0A';
-		  $kendala 				= $_POST['kendala'].'%0A';
-  
-		  $token = $_POST['token'];
-		  $chat_id = $_POST['chat_id'];
-		  $message = 'Laporan kendala Kassandra WiFi%0A'.$date.$time.'%0AID Laporan : '.$id_lapor.'Nama : '.$nama.'No HP : wa.me/'.$no_hp.'Kendala : '.$kendala.'';
-		  //$api = 'https://api.telegram.org/botTokenBotAnda/sendMessage?chat_id=xxxx&text='.$message.'';
-		  $api = 'https://api.telegram.org/bot'.$token.'/sendMessage?chat_id='.$chat_id.'&text='.$message.'';
-  
-  
-		  $ch = curl_init($api);
-			  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-			  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-			  curl_setopt($ch, CURLOPT_URL, $api);
-			  $result = curl_exec($ch);
-			  curl_close($ch);
-
-    if ($result){
-
-      echo "<script>
-      Swal.fire({title: 'Terima kasih, laporan anda akan segera kami proses demi kenyamanan internet bersama dan anda akan kami konfirmasi via whatsapp / email bila layanan sudah berjalan dengan normal',text: '',icon: 'success',confirmButtonText: 'OKE'
-      }).then((result) => {
-          if (result.value) {
-              window.location = 'lapor.php';
-          }
-      })</script>";
-
-      }else{
-      echo "<script>
-      Swal.fire({title: 'Anda gagal melaporkan ! pastikan semua data sudah terisi..',text: '',icon: 'error',confirmButtonText: 'OKE'
-      }).then((result) => {
-          if (result.value) {
-              window.location = 'lapor.php';
-          }
-      })</script>";
-    }
-  }
-    
-?>
