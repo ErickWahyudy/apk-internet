@@ -221,6 +221,8 @@ $frmt = "Z"."00".$tmbh;
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
+                        <a href="feedback.php" class="dropdown-item">Feedback</a>
+                        <a href="lapor.php" class="dropdown-item">Lapor ada kendala</a>
                         <a href="./kassandra-wifi/feature.html" class="dropdown-item">Features</a>
                         <a href="./kassandra-wifi/team.html" class="dropdown-item">Our Team</a>
                         <a href="./kassandra-wifi/testimonial.html" class="dropdown-item">Testimonial</a>

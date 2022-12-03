@@ -133,15 +133,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav me-auto p-3 p-lg-0">
-                <a href="landingpage.php" class="nav-item nav-link active">Home</a>
+                <a href="landingpage.php" class="nav-item nav-link">Home</a>
                 <a href="promo.php" class="nav-item nav-link">Promo</a>
                 <a href="./kassandra-wifi/about.html" class="nav-item nav-link">About Us</a>
                 <a href="./kassandra-wifi/service.html" class="nav-item nav-link">Services</a>
                 <a href="./kassandra-wifi/project.html" class="nav-item nav-link">Projects</a>
-                <a href="speedtest.php" class="nav-item nav-link">Speedtest</a>
+                <a href="speedtest.php" class="nav-item nav-link active">Speedtest</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
+                        <a href="feedback.php" class="dropdown-item">Feedback</a>
+                        <a href="lapor.php" class="dropdown-item">Lapor ada kendala</a>
                         <a href="./kassandra-wifi/feature.html" class="dropdown-item">Features</a>
                         <a href="./kassandra-wifi/team.html" class="dropdown-item">Our Team</a>
                         <a href="./kassandra-wifi/testimonial.html" class="dropdown-item">Testimonial</a>
