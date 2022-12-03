@@ -167,12 +167,12 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
-            <h1 class="display-4 text-white animated slideInDown mb-3">Contact</h1>
+            <h1 class="display-4 text-white animated slideInDown mb-3">Lapor</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Contact</li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Lapor</li>
                 </ol>
             </nav>
         </div>
@@ -180,8 +180,8 @@
     <!-- Page Header End -->
 
 
-    <!-- Contact Start -->
-    <div class="container-xxl py-5">
+    <!-- Lapor Start -->
+    <div class="container-xxl">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                 <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
@@ -286,22 +286,22 @@
                     <h5 class="text-light mb-4">Gallery</h5>
                     <div class="row g-2">
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/1.jpg" alt="Image">
+                            <img class="img-fluid rounded" src="kassandra-wifi/img/1.jpg" alt="Image">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/2.jpg" alt="Image">
+                            <img class="img-fluid rounded" src="kassandra-wifi/img/2.jpg" alt="Image">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/3.jpg" alt="Image">
+                            <img class="img-fluid rounded" src="kassandra-wifi/img/3.jpg" alt="Image">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/4.jpg" alt="Image">
+                            <img class="img-fluid rounded" src="kassandra-wifi/img/4.jpg" alt="Image">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/5.jpg" alt="Image">
+                            <img class="img-fluid rounded" src="kassandra-wifi/img/5.jpg" alt="Image">
                         </div>
                         <div class="col-4">
-                            <img class="img-fluid rounded" src="img/6.jpg" alt="Image">
+                            <img class="img-fluid rounded" src="kassandra-wifi/img/6.jpg" alt="Image">
                         </div>
                     </div>
                 </div>
@@ -311,7 +311,7 @@
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5" type="text"
                             placeholder="any question ?" readonly>
-                        <a href="contact.html" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">klik..</a>
+                        <a href="kassandra-wifi/contact.html" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">klik..</a>
                     </div>
                 </div>
             </div>
