@@ -357,13 +357,13 @@ $(window).on('load',function(){
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="alamat" name="alamat" placeholder="Jln, Rt/Rw, Desa, Kecamatan, Kabupaten">
+                                    <input type="text" class="form-control" id="alamat" name="alamat" placeholder="Jln, Rt/Rw, Desa, Kecamatan, Kabupaten" required>
                                     <label for="alamat">Alamat</label>
                                 </div>
                             </div>
                             <div class="form-floating">
-                                <select name="id_paket" id="id_paket" class="form-select"  aria-label="Floating label select example">
-                                    <option selected="selected">-- Pilih Paket --</option>
+                                <select name="id_paket" id="id_paket" class="form-select"  aria-label="Floating label select example" required>
+                                    <option selected="selected" required>-- Pilih Paket --</option>
                                         <?php
                                     // ambil data dari database
                                     $query = "select * from tb_paket order by id_paket asc limit 1,10";
@@ -381,7 +381,7 @@ $(window).on('load',function(){
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email aktif">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email aktif" required>
                                     <label for="email">Email Aktif</label>
                                 </div>
                             </div>
