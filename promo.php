@@ -634,11 +634,11 @@ $(window).on('load',function(){
 							
 
 		include "inc/koneksi.php"; //ini untuk masuk ke database
-		$cekdulu= "select * from tb_pelanggan where email='$_POST[email]'"; //email dan $_POST[un] diganti sesuai dengan yang kalian gunakan
+		$cekdulu= "select * from tb_pelanggan where nama='$_POST[nama]'"; //email dan $_POST[un] diganti sesuai dengan yang kalian gunakan
 		$prosescek= mysqli_query($koneksi, $cekdulu);
 		if (mysqli_num_rows($prosescek)>0) { //proses mengingatkan data sudah ada
 			echo "<script>
-			Swal.fire({title: 'Akun Email Sudah Pernah Digunakan Mendaftar, Silakan Menggunakan Akun Email Lain',text: '',icon: 'warning',confirmButtonText: 'OKE'
+			Swal.fire({title: 'Nama akun anda sudah terdaftar di system kami, silakan dicek kembali',text: '',icon: 'warning',confirmButtonText: 'OKE'
 			}).then((result) => {
 				if (result.value) {
 					window.location = 'promo.php';
@@ -658,6 +658,18 @@ $(window).on('load',function(){
 			})</script>";
 		}
 		else {
+        $cekdulu= "select * from tb_pelanggan where email='$_POST[email]'"; //email dan $_POST[un] diganti sesuai dengan yang kalian gunakan
+		$prosescek= mysqli_query($koneksi, $cekdulu);
+		if (mysqli_num_rows($prosescek)>0) { //proses mengingatkan data sudah ada
+			echo "<script>
+			Swal.fire({title: 'Akun Email Sudah Pernah Digunakan Mendaftar, Silakan Menggunakan Akun Email Lain',text: '',icon: 'warning',confirmButtonText: 'OKE'
+			}).then((result) => {
+				if (result.value) {
+					window.location = 'promo.php';
+				}
+			})</script>";
+		}
+        else {
 
 			//kompress gambar
 			function compressImage($source, $destination, $quality) {
@@ -862,6 +874,7 @@ $(window).on('load',function(){
     		}
   		}
 	}
+}
 }
 		
 
