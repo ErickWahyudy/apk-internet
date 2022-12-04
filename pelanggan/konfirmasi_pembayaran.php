@@ -202,7 +202,7 @@ $sql_simpan = "INSERT INTO tb_tagihan_konfirmasi (id_konfirmasi, id_pelanggan, i
                 window.location = 'aplication.php?page=data-tagihan';
             }
         })</script>";
-    }
+    	}
+	}
 }
-
 ?>
