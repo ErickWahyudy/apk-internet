@@ -152,7 +152,7 @@ $kode_tahun = date("Y");
 
 								<?php }elseif($tgl = $data['tanggal']){ ?>
 
-								<span class=""><?php  $tgl = $data['tanggal']; echo date("d F Y", strtotime($tgl))?></span>
+								<span class=""><?php echo tanggal ($data['tanggal']) ?></span>
 
 							</td>
 

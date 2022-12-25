@@ -60,7 +60,7 @@
 								<?php echo $data['alamat']; ?>
 							</td>
 							<td>
-								<?php  $tgl = $data['tgl_daftar']; echo date("d F Y", strtotime($tgl))?>
+								<?php echo tanggal ($data['tgl_daftar']); ?>
 							</td>
 							<td>
 								<?php echo $data['status']; ?>

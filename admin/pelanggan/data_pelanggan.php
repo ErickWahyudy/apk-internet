@@ -66,7 +66,7 @@
 								<?php echo $data['no_hp']; ?>
 							</td>
 							<td>
-								<?php echo date("d F Y", strtotime($data['terdaftar_mulai'])) ?>
+								<?php echo tanggal ($data['terdaftar_mulai']); ?>
 							</td>
 							<td>
 								<?php echo $data['email']; ?>

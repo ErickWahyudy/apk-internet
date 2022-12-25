@@ -58,7 +58,7 @@
                                 <?php echo $data['feedback']; ?>
                             </td>
                             <td>
-                                <?php  $tgl = $data['tanggal']; echo date("d F Y", strtotime($tgl))?>
+                                <?php echo tanggal ($data['tanggal']); ?>
                             </td>
                             <td>
                                 <a href="?page=edit-feedback&kode=<?php echo $data['id_feedback']; ?>" title="Ubah"
