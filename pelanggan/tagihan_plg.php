@@ -362,7 +362,7 @@ Tanggal 10 - Bulan <?php echo $data['bulan']; ?> / <?php echo $data['tahun']; ?>
 								<tr>
 									<th>Tanggal Bayar</th>
 									<td>
-									<span class="">: <?php  $tgl = $data['tgl_bayar']; echo date("d F Y", strtotime($tgl))?></span>
+									<span class="">: <?php echo tanggal ($data['tgl_bayar']); ?></span>
 									</td>
 								</tr>
 									<?php } ?>

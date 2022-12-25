@@ -210,7 +210,7 @@ No Telp / Wa : <?php echo $data['no_hp']; ?>
 
 								<?php }elseif($tgl = $data['tgl_bayar']){ ?>
 
-								<span class=""><?php  $tgl = $data['tgl_bayar']; echo date("d F Y", strtotime($tgl))?></span>
+								<span class=""><?php echo tanggal ($data['tgl_bayar']); ?></span>
 
 							</td>
 
@@ -226,7 +226,7 @@ No Telp / Wa : <?php echo $data['no_hp']; ?>
 
 <tr>
 
-	<td align='center'>Ponorogo, <?php echo date("d F Y");  ?> </br></td>
+	<td align='center'>Ponorogo, <?php echo tanggal (date('Y-m-d')); ?> </br></td>
 
 </tr>
 

@@ -58,7 +58,7 @@
 						<tr>
 							<th class="col-sm-2">Terdaftar Mulai</th>
 							<td>
-								<?php echo date("d F Y", strtotime($data['terdaftar_mulai'])) ?>
+								<?php echo tanggal ($data['terdaftar_mulai']); ?>
 							</td>
 						</tr>
 

@@ -61,7 +61,7 @@
 								<?php if($tgl == '0000-00-00'){ ?>
 								<span class="">-- / -- / ----</span>
 								<?php }elseif($tgl = $data['tgl_bayar']){ ?>
-								<span class=""><?php  $tgl = $data['tgl_bayar']; echo date("d F Y", strtotime($tgl))?></span>
+								<span class=""><?php echo tanggal($data['tgl_bayar']); ?></span>
 							</td>
 							<?php } ?>
 							<td>

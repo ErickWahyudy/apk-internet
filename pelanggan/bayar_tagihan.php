@@ -120,7 +120,7 @@ Tanggal 10 - Bulan <?php echo $data_cek['bulan']; ?> / <?php echo $data_cek['tah
 								<tr>
 									<th>Tanggal Bayar</th>
 									<td>
-									<span class="">: <?php  $tgl = $data_cek['tgl_bayar']; echo date("d F Y", strtotime($tgl))?></span>
+									<span class="">: <?php echo tanggal ($data_cek['tgl_bayar']); ?></span>
 									</td>
 								</tr>
 									<?php } ?>
