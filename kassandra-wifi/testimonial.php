@@ -2,6 +2,7 @@
 <html lang="en">
 <?php
     include "../inc/koneksi.php";
+    include "../inc/rupiah.php";
 ?>
 
 <head>
@@ -201,12 +202,13 @@
             ?> 
                 <div class="testimonial-item bg-light rounded p-4">
                     <div class="d-flex align-items-center mb-4">
-                        <img class="flex-shrink-0 rounded-circle border p-1" style="width:25%" src="../dist/img/user.png" alt="">
+                        <img class="flex-shrink-0 rounded-circle border p-1" style="width:22%" src="../dist/img/user.png" alt="">
                         <div class="ms-4">
-                            <h5 class="mb-1"><?php $short_name = explode(" ", $data['nama']); echo $short_name[0]; ?></h5>
-                            <span><?php $date = date_create($data['tanggal']); echo date_format($date, 'd F Y'); ?></span>
+                            <h5 class="mb-1"><?php echo shortname ($data['nama']); ?></h5>
+                            <span><?php echo tanggal ($data['tanggal']); ?></span> 
                         </div>
                     </div>
+                    <span><?php echo rating($data['nilai']); ?></span> <br>
                     <p class="mb-0">"<?php echo $data['feedback']; ?>"</p>
                 </div>
             <?php } ?>
