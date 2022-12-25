@@ -129,15 +129,15 @@ $format = "K"."00".$tambah;
 			$x        					= explode('.', $bukti_bayar);
 			$ekstensi    				= strtolower(end($x));
 			$ukuran       				= $_FILES['bukti_bayar']['size'];
-			$namabarubayar 				= $data_cek['nama']."_".$tanggal."_".$bukti_bayar;
+			$namabarubayar 				= $data['nama']."_".$bukti_bayar;
 			$file_tmp    				= $_FILES['bukti_bayar']['tmp_name'];
 			//kompress gambar
 			$source_img 				= $file_tmp;
-			$destination_img 			= 'uploadfile/bukti_bayar/'.$namabarubayar;
+			$destination_img 			= '../uploadfile/bukti_bayar/'.$namabarubayar;
 			$quality 					= 20;
 			compressImage($source_img, $destination_img, $quality);
 
-			//cek sudah pernah melakukan konfirmasi apa belum		
+		//cek sudah pernah melakukan konfirmasi apa belum		
 		include "../inc/koneksi.php"; //ini untuk masuk ke database
 		$cekdulu= "select * from tb_tagihan_konfirmasi where bukti_bayar='$namabarubayar'"; //email dan $_POST[un] diganti sesuai dengan yang kalian gunakan
 		$prosescek= mysqli_query($koneksi, $cekdulu);
@@ -155,7 +155,7 @@ $format = "K"."00".$tambah;
 $sql_simpan = "INSERT INTO tb_tagihan_konfirmasi (id_konfirmasi, id_pelanggan, id_tagihan, bukti_bayar, tgl_konfirmasi) VALUES (
            	'".$format."',
            	'".$data_cek['id_pelanggan']."',
-			'" .$data_cek['id_tagihan']."',
+			'".$data_cek['id_tagihan']."',
 		 	'".$namabarubayar."',
 			'".$tanggal."')";
         $query_simpan = mysqli_query($koneksi, $sql_simpan);

@@ -48,14 +48,14 @@
 require "../../inc/koneksi.php";
 
 // Get connection object and set the charset
-$conn = mysqli_connect($servername, $username, $password, $database);
-$conn->set_charset("utf8");
+$koneksi = mysqli_connect($servername, $username, $password, $database);
+$koneksi->set_charset("utf8");
 
 
 // Get All Table Names From the Database
 $tables = array();
 $sql = "SHOW TABLES";
-$result = mysqli_query($conn, $sql);
+$result = mysqli_query($koneksi, $sql);
 
 
 
@@ -68,14 +68,14 @@ foreach ($tables as $table) {
     
     // Prepare SQLscript for creating table structure
     $query = "SHOW CREATE TABLE $table";
-    $result = mysqli_query($conn, $query);
+    $result = mysqli_query($koneksi, $query);
     $row = mysqli_fetch_row($result);
     
     $sqlScript .= "\n\n" . $row[1] . ";\n\n";
     
     
     $query = "SELECT * FROM $table";
-    $result = mysqli_query($conn, $query);
+    $result = mysqli_query($koneksi, $query);
     
     $columnCount = mysqli_num_fields($result);
     
@@ -105,7 +105,7 @@ foreach ($tables as $table) {
 if(!empty($sqlScript))
 {
     // Save the SQL script to a backup file
-    $backup_file_name = $database . '_backup_.sql';
+    $backup_file_name = $database . '_backup.sql';
     $fileHandler = fopen($backup_file_name, 'w+');
     $number_of_lines = fwrite($fileHandler, $sqlScript);
     fclose($fileHandler); 

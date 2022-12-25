@@ -135,22 +135,22 @@
             <div class="navbar-nav me-auto p-3 p-lg-0">
                 <a href="../landingpage.php" class="nav-item nav-link">Home</a>
                 <a href="../promo.php" class="nav-item nav-link">Promo</a>
-                <a href="about.html" class="nav-item nav-link">About Us</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
-                <a href="project.html" class="nav-item nav-link active">Projects</a>
+                <a href="about.php" class="nav-item nav-link">About Us</a>
+                <a href="service.php" class="nav-item nav-link">Services</a>
+                <a href="project.php" class="nav-item nav-link">Projects</a>
                 <a href="../speedtest.php" class="nav-item nav-link">Speedtest</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
                         <a href="../feedback.php" class="dropdown-item">Feedback</a>
                         <a href="../lapor.php" class="dropdown-item">Lapor ada kendala</a>
-                        <a href="feature.html" class="dropdown-item">Features</a>
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
+                        <a href="feature.php" class="dropdown-item">Features</a>
+                        <a href="team.php" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.php" class="dropdown-item active">Testimonial</a>
+                        <a href="404.php" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                <a href="contact.php" class="nav-item nav-link">Contact Us</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Login Aplikasi</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
@@ -169,12 +169,12 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
-            <h1 class="display-4 text-white animated slideInDown mb-3">Projects</h1>
+            <h1 class="display-4 text-white animated slideInDown mb-3">Transaction</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Projects</li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Transaction</li>
                 </ol>
             </nav>
         </div>
@@ -182,156 +182,77 @@
     <!-- Page Header End -->
 
 
-    <!-- Project Start -->
+    <!-- Transaction Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h6 class="section-title bg-white text-center text-primary px-3">Our Projects</h6>
-                <h1 class="display-6 mb-4">Learn More About Our Complete Projects</h1>
-            </div>
-            <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="project-item border rounded h-100 p-4" data-dot="01">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="img/project-1.jpg" alt="">
-                        <a href="img/project-1.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-                <div class="project-item border rounded h-100 p-4" data-dot="02">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="img/project-2.jpg" alt="">
-                        <a href="img/project-2.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-                <div class="project-item border rounded h-100 p-4" data-dot="03">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="img/project-3.jpg" alt="">
-                        <a href="img/project-2.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-                <div class="project-item border rounded h-100 p-4" data-dot="04">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="img/project-4.jpg" alt="">
-                        <a href="img/project-4.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-                <div class="project-item border rounded h-100 p-4" data-dot="05">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="img/project-5.jpg" alt="">
-                        <a href="img/project-5.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-                <div class="project-item border rounded h-100 p-4" data-dot="06">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="img/project-6.jpg" alt="">
-                        <a href="img/project-6.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-                <div class="project-item border rounded h-100 p-4" data-dot="07">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="img/project-7.jpg" alt="">
-                        <a href="img/project-7.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-                <div class="project-item border rounded h-100 p-4" data-dot="08">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="img/project-8.jpg" alt="">
-                        <a href="img/project-8.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-                <div class="project-item border rounded h-100 p-4" data-dot="09">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="img/project-9.jpg" alt="">
-                        <a href="img/project-9.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-                <div class="project-item border rounded h-100 p-4" data-dot="10">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="img/project-10.jpg" alt="">
-                        <a href="img/project-10.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Project End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
-                <h1 class="display-6 mb-4">What Our Clients Say!</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">Transaction</h6>
+                <h1 class="display-6 mb-4">What Our transaction say</h1>
             </div>
             <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
                 <div class="testimonial-item bg-light rounded p-4">
                     <div class="d-flex align-items-center mb-4">
-                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/testimonial-1.jpg" alt="">
+                        <img class="flex-shrink-0 rounded-square border p-1" style="width:50%" src="../dist/img/transferbank.png" alt="">
                         <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
+                            <h5 class="mb-1">Transfer Antar Bank</h5>
+                            <span>Payment</span>
                         </div>
                     </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos.
-                        Clita erat ipsum et lorem et sit.</p>
+                    
                 </div>
                 <div class="testimonial-item bg-light rounded p-4">
                     <div class="d-flex align-items-center mb-4">
-                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/testimonial-2.jpg" alt="">
+                        <img class="flex-shrink-0 rounded-square border p-1" style="width:50%" src="../dist/img/dana.png" alt="">
                         <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
+                            <h5 class="mb-1">Dana</h5>
+                            <span>Payment</span>
                         </div>
                     </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos.
-                        Clita erat ipsum et lorem et sit.</p>
                 </div>
                 <div class="testimonial-item bg-light rounded p-4">
                     <div class="d-flex align-items-center mb-4">
-                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/testimonial-3.jpg" alt="">
+                        <img class="flex-shrink-0 rounded-square border p-1" style="width:50%" src="../dist/img/linkaja.png" alt="">
                         <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
+                            <h5 class="mb-1">LinkAja</h5>
+                            <span>Payment</span>
                         </div>
                     </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos.
-                        Clita erat ipsum et lorem et sit.</p>
+                   
                 </div>
                 <div class="testimonial-item bg-light rounded p-4">
                     <div class="d-flex align-items-center mb-4">
-                        <img class="flex-shrink-0 rounded-circle border p-1" src="img/testimonial-4.jpg" alt="">
+                        <img class="flex-shrink-0 rounded-square border p-1" style="width:50%" src="../dist/img/shopeepay.png" alt="">
                         <div class="ms-4">
-                            <h5 class="mb-1">Client Name</h5>
-                            <span>Profession</span>
+                            <h5 class="mb-1">ShopeePay</h5>
+                            <span>Payment</span>
                         </div>
                     </div>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos.
-                        Clita erat ipsum et lorem et sit.</p>
+                   
+                </div>
+                <div class="testimonial-item bg-light rounded p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-square border p-1" style="width:50%" src="../dist/img/alfamart.png" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Alfamart</h5>
+                            <span>Payment</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="testimonial-item bg-light rounded p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-square border p-1" style="width:50%" src="../dist/img/indomaret.png" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1">Indomart</h5>
+                            <span>Payment</span>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
+    <!-- Transaction End -->
 
 
     <!-- Footer Start -->
@@ -391,7 +312,7 @@
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5" type="text"
                             placeholder="any question ?" readonly>
-                        <a href="contact.html" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">klik..</a>
+                        <a href="contact.php" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">klik..</a>
                     </div>
                 </div>
             </div>

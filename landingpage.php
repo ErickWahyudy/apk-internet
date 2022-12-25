@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+    <?php
+    include 'inc/koneksi.php';
+    ?>
 
 <head>
     <meta charset="utf-8">
@@ -132,22 +135,22 @@
             <div class="navbar-nav me-auto p-3 p-lg-0">
                 <a href="landingpage.php" class="nav-item nav-link active">Home</a>
                 <a href="promo.php" class="nav-item nav-link">Promo</a>
-                <a href="./kassandra-wifi/about.html" class="nav-item nav-link">About Us</a>
-                <a href="./kassandra-wifi/service.html" class="nav-item nav-link">Services</a>
-                <a href="./kassandra-wifi/project.html" class="nav-item nav-link">Projects</a>
+                <a href="./kassandra-wifi/about.php" class="nav-item nav-link">About Us</a>
+                <a href="./kassandra-wifi/service.php" class="nav-item nav-link">Services</a>
+                <a href="./kassandra-wifi/project.php" class="nav-item nav-link">Projects</a>
                 <a href="speedtest.php" class="nav-item nav-link">Speedtest</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
                         <a href="feedback.php" class="dropdown-item">Feedback</a>
                         <a href="lapor.php" class="dropdown-item">Lapor ada kendala</a>
-                        <a href="./kassandra-wifi/feature.html" class="dropdown-item">Features</a>
-                        <a href="./kassandra-wifi/team.html" class="dropdown-item">Our Team</a>
-                        <a href="./kassandra-wifi/testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="./kassandra-wifi/404.html" class="dropdown-item">404 Page</a>
+                        <a href="./kassandra-wifi/feature.php" class="dropdown-item">Features</a>
+                        <a href="./kassandra-wifi/team.php" class="dropdown-item">Our Team</a>
+                        <a href="./kassandra-wifi/testimonial.php" class="dropdown-item">Testimonial</a>
+                        <a href="./kassandra-wifi/404.php" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
-                <a href="./kassandra-wifi/contact.html" class="nav-item nav-link">Contact Us</a>
+                <a href="./kassandra-wifi/contact.php" class="nav-item nav-link">Contact Us</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Login Aplikasi</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
@@ -483,99 +486,34 @@
 
 
 
-    <!-- Project Start -->
+    <!-- Feedback Pelanggan -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h6 class="section-title bg-white text-center text-primary px-3">Our Projects</h6>
-                <h1 class="display-6 mb-4">Learn More About Our Complete Projects</h1>
+                <h6 class="section-title bg-white text-center text-primary px-3">Feedback Pelanggan</h6>
+                <h1 class="display-6 mb-4">What Our Client Say</h1>
             </div>
-            <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="project-item border rounded h-100 p-4" data-dot="01">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="./kassandra-wifi/img/project-1.jpg" alt="">
-                        <a href="./kassandra-wifi/img/project-1.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+            <?php
+                  $no = 1;
+                  $sql = $koneksi->query("SELECT * from tb_feedback order by id_feedback desc");
+                  while ($data = $sql->fetch_assoc()) {
+            ?> 
+                <div class="testimonial-item bg-light rounded p-4">
+                    <div class="d-flex align-items-center mb-4">
+                        <img class="flex-shrink-0 rounded-circle border p-1" style="width:25%" src="../dist/img/user.png" alt="">
+                        <div class="ms-4">
+                            <h5 class="mb-1"><?php $short_name = explode(" ", $data['nama']); echo $short_name[0]; ?></h5>
+                            <span><?php $date = date_create($data['tanggal']); echo date_format($date, 'd F Y'); ?></span>
+                        </div>
                     </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
+                    <p class="mb-0">"<?php echo $data['feedback']; ?>"</p>
                 </div>
-                <div class="project-item border rounded h-100 p-4" data-dot="02">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="./kassandra-wifi/img/project-2.jpg" alt="">
-                        <a href="./kassandra-wifi/img/project-2.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-                <div class="project-item border rounded h-100 p-4" data-dot="03">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="./kassandra-wifi/img/project-3.jpg" alt="">
-                        <a href="./kassandra-wifi/img/project-2.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-                <div class="project-item border rounded h-100 p-4" data-dot="04">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="./kassandra-wifi/img/project-4.jpg" alt="">
-                        <a href="./kassandra-wifi/img/project-4.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-                <div class="project-item border rounded h-100 p-4" data-dot="05">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="./kassandra-wifi/img/project-5.jpg" alt="">
-                        <a href="./kassandra-wifi/img/project-5.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-                <div class="project-item border rounded h-100 p-4" data-dot="06">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="./kassandra-wifi/img/project-6.jpg" alt="">
-                        <a href="./kassandra-wifi/img/project-6.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-                <div class="project-item border rounded h-100 p-4" data-dot="07">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="./kassandra-wifi/img/project-7.jpg" alt="">
-                        <a href="./kassandra-wifi/img/project-7.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-                <div class="project-item border rounded h-100 p-4" data-dot="08">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="./kassandra-wifi/img/project-8.jpg" alt="">
-                        <a href="./kassandra-wifi/img/project-8.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-                <div class="project-item border rounded h-100 p-4" data-dot="09">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="./kassandra-wifi/img/project-9.jpg" alt="">
-                        <a href="./kassandra-wifi/img/project-9.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-                <div class="project-item border rounded h-100 p-4" data-dot="10">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded" src="./kassandra-wifi/img/project-10.jpg" alt="">
-                        <a href="./kassandra-wifi/img/project-10.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
-                    </div>
-                    <h6>UI / UX Design</h6>
-                    <span>Digital agency website design and development</span>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
-    <!-- Project End -->
-
+</div>
+<!-- Feedback Pelanggan End -->
 
     <!-- Team Start -->
     <div class="container-xxl py-5">
@@ -691,7 +629,7 @@
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5" type="text"
                             placeholder="any question ?" readonly>
-                        <a href="kassandra-wifi/contact.html" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">klik..</a>
+                        <a href="kassandra-wifi/contact.php" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">klik..</a>
                     </div>
                 </div>
             </div>

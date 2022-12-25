@@ -80,8 +80,8 @@ function get_client_browser() {
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
 	<?php
-    if(isset($_GET['kode'])){
-        $sql_cek = "SELECT * FROM tb_pelanggan inner join tb_paket on tb_pelanggan.id_paket=tb_paket.id_paket WHERE nama='".$_GET['kode']."'";
+    if(isset($_GET['id'])){
+        $sql_cek = "SELECT * FROM tb_pelanggan inner join tb_paket on tb_pelanggan.id_paket=tb_paket.id_paket WHERE no_hp='".$_GET['id']."'";
         $query_cek = mysqli_query($koneksi, $sql_cek);
         $data_cek = mysqli_fetch_array($query_cek,MYSQLI_BOTH);
     }
@@ -346,15 +346,15 @@ if (isset ($_POST['Ubah'])){
 		no_hp='".$_POST['no_hp']."',
 		email='".$_POST['email']."',
 		password='".$_POST['password']."'
-        WHERE id_pelanggan='".$_POST['id_pelanggan']."'";
+        WHERE id_pelanggan='".$data_cek['id_pelanggan']."'";
     $query_ubah = mysqli_query($koneksi, $sql_ubah);
 
     if ($query_ubah) {
         echo "<script>
-        Swal.fire({title: 'Ubah Data Berhasil',text: '',icon: 'success',confirmButtonText: 'OK'
+        Swal.fire({title: 'Update Data Berhasil',text: '',icon: 'success',confirmButtonText: 'OK'
         }).then((result) => {
             if (result.value) {
-                window.location = 'aplication.php?page=data-pelanggan';
+                window.location = 'https://wifi.kassandra.my.id/pelanggan/update_data.php?id=".$_POST['no_hp']."';
             }
         })</script>";
 
@@ -462,10 +462,10 @@ if (isset ($_POST['Ubah'])){
 
         }else{
         echo "<script>
-        Swal.fire({title: 'Ubah Data Gagal',text: '',icon: 'error',confirmButtonText: 'OK'
+        Swal.fire({title: 'Update Data Gagal',text: '',icon: 'error',confirmButtonText: 'OK'
         }).then((result) => {
             if (result.value) {
-                window.location = 'aplication.php?page=data-pelanggan';
+                window.location = 'https://wifi.kassandra.my.id/pelanggan/update_data.php?id=".$_POST['no_hp']."';
             }
         })</script>";
     }

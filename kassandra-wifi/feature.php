@@ -135,22 +135,22 @@
             <div class="navbar-nav me-auto p-3 p-lg-0">
                 <a href="../landingpage.php" class="nav-item nav-link">Home</a>
                 <a href="../promo.php" class="nav-item nav-link">Promo</a>
-                <a href="about.html" class="nav-item nav-link">About Us</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
-                <a href="project.html" class="nav-item nav-link">Projects</a>
+                <a href="about.php" class="nav-item nav-link">About Us</a>
+                <a href="service.php" class="nav-item nav-link">Services</a>
+                <a href="project.php" class="nav-item nav-link">Projects</a>
                 <a href="../speedtest.php" class="nav-item nav-link">Speedtest</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
                         <a href="../feedback.php" class="dropdown-item">Feedback</a>
                         <a href="../lapor.php" class="dropdown-item">Lapor ada kendala</a>
-                        <a href="feature.html" class="dropdown-item">Features</a>
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item active">404 Page</a>
+                        <a href="feature.php" class="dropdown-item active">Features</a>
+                        <a href="team.php" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.php" class="dropdown-item">Testimonial</a>
+                        <a href="404.php" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                <a href="contact.php" class="nav-item nav-link">Contact Us</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Login Aplikasi</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
@@ -169,12 +169,12 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
-            <h1 class="display-4 text-white animated slideInDown mb-3">404 Page</h1>
+            <h1 class="display-4 text-white animated slideInDown mb-3">Features</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">404 Page</li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Features</li>
                 </ol>
             </nav>
         </div>
@@ -182,22 +182,106 @@
     <!-- Page Header End -->
 
 
-    <!-- 404 Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
-                    <h1 class="display-1">404</h1>
-                    <h1 class="mb-4">Page Not Found</h1>
-                    <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to
-                        our home page or try to use a search?</p>
-                    <a class="btn btn-primary rounded-pill py-3 px-5" href="">Go Back To Home</a>
+    <!-- Facts Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="fact-item bg-light rounded text-center h-100 p-5">
+                        <i class="fa fa-certificate fa-4x text-primary mb-4"></i>
+                        <h5 class="mb-3">Pemasangan Baru</h5>
+                        <h4 class="mb-3"><del style="color:red">Rp. 1.000.000</del></h4>
+                        <h4 class="mb-3">Rp. 350.000</h4>
+                        <h6 class="text-muted"><small>S&k berlaku</small></h6>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="fact-item bg-light rounded text-center h-100 p-5">
+                        <i class="fa fa-check fa-4x text-primary mb-4"></i>
+                        <h5 class="mb-3">Iuran Bulanan</h5>
+                        <h4 class="mb-3">Rp. 80.000 s/d <br> Rp. 300.000</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="fact-item bg-light rounded text-center h-100 p-5">
+                        <i class="fa fa-users-cog fa-4x text-primary mb-4"></i>
+                        <h5 class="mb-3">Teknisi only on problem solutions</h5>
+                        <h4 class="mb-3">24 hour</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="fact-item bg-light rounded text-center h-100 p-5">
+                        <i class="fa fa-users fa-4x text-primary mb-4"></i>
+                        <h5 class="mb-3">Jaringan Stabil</h5>
+                        <h4 class="mb-3">karena berbasis fiber optic</h4>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- 404 End -->
+    <!-- Facts End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="h-100">
+                        <h6 class="section-title bg-white text-start text-primary pe-3">Why Choose Us</h6>
+                        <h1 class="display-6 mb-4">Mengapa harus memilih layanan kami !</h1>
+                        <p class="mb-4">Kami selalu menjaga kualitas layanan hotspot wifi yang kami berikan, jaringan
+                            anti lemot kecuali saat wifi down. Teknisi andalan pilihan kami yang selalu stanbay. harga
+                            yang terjangkau adalah solusi kami untuk masyarakat</p>
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="skill">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">Kualitas layanan</p>
+                                        <p class="mb-2">85%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="85"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="skill">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">Kualitas teknisi</p>
+                                        <p class="mb-2">85%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="85"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="skill">
+                                    <div class="d-flex justify-content-between">
+                                        <p class="mb-2">Kualitas jaringan hotspot wifi</p>
+                                        <p class="mb-2">90%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90"
+                                            aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="img-border">
+                        <img class="img-fluid" src="img/iklan4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
 
 
     <!-- Footer Start -->
@@ -257,7 +341,7 @@
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5" type="text"
                             placeholder="any question ?" readonly>
-                        <a href="contact.html" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">klik..</a>
+                        <a href="contact.php" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">klik..</a>
                     </div>
                 </div>
             </div>

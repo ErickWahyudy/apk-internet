@@ -91,12 +91,14 @@
 								</a> &emsp;
 
 								<a href="https://api.whatsapp.com/send?phone=<?php echo $data['no_hp']; ?>&text=
-								Terima kasih sudah menghubungi admin sdr/i <?php echo $data['nama']; ?>. Berikut adalah akun yang anda gunakan untuk login di aplikasi KassandraWiFi%0A
-								https://wifi.kassandra.my.id %0A
+								Berikut kami sampaikan data akun anda yang digunakan di system aplikasi KassandraWiFi%0A
 								Nama : <?php echo $data['nama']; ?> %0A
 								Alamat : <?php echo $data['alamat']; ?> %0A
-								*Email Login : <?php echo $data['email']; ?>* %0A
-								*Password : <?php echo $data['password']; ?>* %0A%0A
+								No HP : <?php echo $data['no_hp']; ?> %0A
+								Email Login : <?php echo $data['email']; ?> %0A
+								Password : <?php echo $data['password']; ?> %0A%0A
+								Jika ada perubahan data silakan lakukan perubahan data melalui link berikut %0A
+								https://wifi.kassandra.my.id/pelanggan/update_data.php?id=<?php echo $data['no_hp']; ?> %0A%0A
 								_Pesan ini dikirim oleh system aplikasi KassandraWifi._%0A
 								-wifi@kassandra.my.id-"
 								 target=" _blank" title="Pesan WhatsApp" class="btn btn-success">

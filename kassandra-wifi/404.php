@@ -135,22 +135,22 @@
             <div class="navbar-nav me-auto p-3 p-lg-0">
                 <a href="../landingpage.php" class="nav-item nav-link">Home</a>
                 <a href="../promo.php" class="nav-item nav-link">Promo</a>
-                <a href="about.html" class="nav-item nav-link">About Us</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
-                <a href="project.html" class="nav-item nav-link">Projects</a>
+                <a href="about.php" class="nav-item nav-link">About Us</a>
+                <a href="service.php" class="nav-item nav-link">Services</a>
+                <a href="project.php" class="nav-item nav-link">Projects</a>
                 <a href="../speedtest.php" class="nav-item nav-link">Speedtest</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
                         <a href="../feedback.php" class="dropdown-item">Feedback</a>
                         <a href="../lapor.php" class="dropdown-item">Lapor ada kendala</a>
-                        <a href="feature.html" class="dropdown-item">Features</a>
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
+                        <a href="feature.php" class="dropdown-item">Features</a>
+                        <a href="team.php" class="dropdown-item">Our Team</a>
+                        <a href="testimonial.php" class="dropdown-item">Testimonial</a>
+                        <a href="404.php" class="dropdown-item active">404 Page</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link active">Contact Us</a>
+                <a href="contact.php" class="nav-item nav-link">Contact Us</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Login Aplikasi</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
@@ -169,12 +169,12 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
-            <h1 class="display-4 text-white animated slideInDown mb-3">Contact</h1>
+            <h1 class="display-4 text-white animated slideInDown mb-3">404 Page</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Contact</li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">404 Page</li>
                 </ol>
             </nav>
         </div>
@@ -182,80 +182,22 @@
     <!-- Page Header End -->
 
 
-    <!-- Contact Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
-                <h1 class="display-6 mb-4">If You Have Any Query, Please Feel Free Contact Us</h1>
-            </div>
-            <div class="row g-0 justify-content-center">
-                <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.5s">
-                    <p class="text-center mb-4">The contact form is currently inactive. Get a functional and working
-                        contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code
-                        and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
-                    <form action="javascript:chat();" method="post">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="nama" name="nama" placeholder="name@example.com" autocomplete="off" required>
-                                    <label for="nama">Nama Lengkap</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="number" class="form-control" id="no_hp" name="no_hp" placeholder="No HP / WA" value="62" autocomplete="off" required>
-                                    <label for="no_hp">Nomor HP / WA</label>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat" required>
-                                    <label for="alamat">Alamat</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea type="text" style="height: 100pt;" class="form-control" id="pesan" name="pesan" placeholder="Tuliskan pesan kamu" required></textarea>
-                                    <label for="lapor">Tuliskan Pesan Kamu</label>
-                                </div>
-                            </div>    
-                            <div class="col-12 text-center">
-                                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Kirim pesan</button>
-                            </div>
-                        </div>
-                    </form>
+    <!-- 404 Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
+                    <h1 class="display-1">404</h1>
+                    <h1 class="mb-4">Page Not Found</h1>
+                    <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to
+                        our home page or try to use a search?</p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="">Go Back To Home</a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
-    <div id="confirm" class="modal fade" role="dialog" data-backdrop="static">
-        <div class="modal-dialog modal-sm">
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-body text-center">
-                <p></p>
-              <p style="font-size: 16px">Pesan Anda berhasil terkirim, silahkan klik OK untuk melanjutkan.</p>
-              <p style="font-size: 14px"><a href="../landingpage.php"><button class="btn btn-success beli">OK</button></a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="js/bootstrapiklan.min.js"></script>
-  <script src="js/chat.js"></script>
-  <script src="js/jqueryiklan.min.js"></script>
-
-
-     <!-- Google Map Start -->
-     <div class="container-xxl pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
-        <iframe class="w-100 mb-n2" style="height: 450px;"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252881.1514391924!2d111.52941495!3d-7.9712315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e790b859cfee851%3A0x3027a76e352bea0!2sKabupaten%20Ponorogo%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1669501949328!5m2!1sid!2sid"
-            frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </div>
-    <!-- Google Map End -->
+    <!-- 404 End -->
 
 
     <!-- Footer Start -->
@@ -315,7 +257,7 @@
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5" type="text"
                             placeholder="any question ?" readonly>
-                        <a href="contact.html" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">klik..</a>
+                        <a href="contact.php" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">klik..</a>
                     </div>
                 </div>
             </div>

@@ -134,22 +134,22 @@
             <div class="navbar-nav me-auto p-3 p-lg-0">
                 <a href="landingpage.php" class="nav-item nav-link ">Home</a>
                 <a href="promo.php" class="nav-item nav-link">Promo</a>
-                <a href="./kassandra-wifi/about.html" class="nav-item nav-link">About Us</a>
-                <a href="./kassandra-wifi/service.html" class="nav-item nav-link">Services</a>
-                <a href="./kassandra-wifi/project.html" class="nav-item nav-link">Projects</a>
+                <a href="./kassandra-wifi/about.php" class="nav-item nav-link">About Us</a>
+                <a href="./kassandra-wifi/service.php" class="nav-item nav-link">Services</a>
+                <a href="./kassandra-wifi/project.php" class="nav-item nav-link">Projects</a>
                 <a href="speedtest.php" class="nav-item nav-link">Speedtest</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
                         <a href="feedback.php" class="dropdown-item">Feedback</a>
                         <a href="lapor.php" class="dropdown-item active">Lapor ada kendala</a>
-                        <a href="./kassandra-wifi/feature.html" class="dropdown-item">Features</a>
-                        <a href="./kassandra-wifi/team.html" class="dropdown-item">Our Team</a>
-                        <a href="./kassandra-wifi/testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="./kassandra-wifi/404.html" class="dropdown-item">404 Page</a>
+                        <a href="./kassandra-wifi/feature.php" class="dropdown-item">Features</a>
+                        <a href="./kassandra-wifi/team.php" class="dropdown-item">Our Team</a>
+                        <a href="./kassandra-wifi/testimonial.php" class="dropdown-item">Testimonial</a>
+                        <a href="./kassandra-wifi/404.php" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
-                <a href="./kassandra-wifi/contact.html" class="nav-item nav-link">Contact Us</a>
+                <a href="./kassandra-wifi/contact.php" class="nav-item nav-link">Contact Us</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Login Aplikasi</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
@@ -311,7 +311,7 @@
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control bg-transparent border-secondary w-100 py-3 ps-4 pe-5" type="text"
                             placeholder="any question ?" readonly>
-                        <a href="kassandra-wifi/contact.html" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">klik..</a>
+                        <a href="kassandra-wifi/contact.php" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">klik..</a>
                     </div>
                 </div>
             </div>

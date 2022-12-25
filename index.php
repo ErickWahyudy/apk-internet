@@ -14,6 +14,9 @@
 	include "inc/koneksi.php";
 	include "inc/rupiah.php";
 
+	$kode_bulan = date("m");
+	$kode_tahun = date("Y");
+
 	$sql = $koneksi->query("SELECT count(id_paket) as paket from tb_paket");
 	while ($data= $sql->fetch_assoc()) {
 	
@@ -41,7 +44,7 @@
 		$tagih=$data['tagih_b'];
 	}
 
-	$sql = $koneksi->query("SELECT count(id_tagihan) as tagih_l from tb_tagihan where status='LS'");
+	$sql = $koneksi->query("SELECT count(id_tagihan) as tagih_l from tb_tagihan where status='LS' and bulan='$kode_bulan' and tahun='$kode_tahun'");
 	while ($data= $sql->fetch_assoc()) {
 	
 		$lunas=$data['tagih_l'];
@@ -109,8 +112,10 @@
 	<link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
 
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-	<script src="dist/js/jquery-latest.js"></script>
-	<!-- <script>
+
+	
+	<!-- <script src="dist/js/jquery-latest.js"></script>
+	<script>
 	var refreshId = setInterval(function()
 	{
 	$('#responsecontainer').load('./home/admin.php');
