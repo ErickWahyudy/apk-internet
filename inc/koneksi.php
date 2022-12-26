@@ -1,4 +1,3 @@
-<!-- Start Code -->
 <?php
     $servername = "localhost";
     $database = "apk-internet";
@@ -7,4 +6,3 @@
 
     $koneksi = new mysqli ("localhost","root","","apk-internet");
 ?>
-<!-- End Code -->

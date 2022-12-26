@@ -11,13 +11,15 @@
 <!-- Main content -->
 <section class="content">
     <div class="box box-primary">
-        <div class="box-header with-border">
-            <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                    <i class="fa fa-minus"></i>
-                </button>
-            </div>
-        </div>
+    <div class="box-header with-border">
+			<a href="?page=feedback-pelanggan" title="Tambah Data" class="btn btn-primary">
+				<i class="fa fa-users"></i> Data Pelanggam</a>
+			<div class="box-tools pull-right">
+				<button type="button" class="btn btn-box-tool" data-widget="collapse">
+					<i class="fa fa-minus"></i>
+				</button>
+
+			</div>
         <!-- /.box-header -->
         <div class="box-body">
             <div class="table-responsive">

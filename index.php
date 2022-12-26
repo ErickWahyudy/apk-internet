@@ -662,6 +662,9 @@
               case 'data-feedback':
                   include "admin/feedback/data_feedback.php";
                   break;
+			  case 'feedback-pelanggan':
+				  include "admin/feedback/pelanggan.php";
+				  break;
               case 'add-feedback':
                   include "admin/feedback/add_feedback.php";
                   break;

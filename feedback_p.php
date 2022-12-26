@@ -1,6 +1,13 @@
 <?php
 	include "inc/koneksi.php";
 	include "inc/rupiah.php";
+
+
+    if(isset($_GET['id'])){
+        $sql_cek = "SELECT * FROM tb_pelanggan inner join tb_paket on tb_pelanggan.id_paket=tb_paket.id_paket WHERE no_hp='".$_GET['id']."'";
+        $query_cek = mysqli_query($koneksi, $sql_cek);
+        $data_cek = mysqli_fetch_array($query_cek,MYSQLI_BOTH);
+    }
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +15,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>FEEDBACK KASSANDRAWIFI</title>
+    <title>FEEDBACK KASSANDRAWIFI | <? echo $data_cek['nama']; ?></title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta name="keywords"
         content="wifi kassandra my id, kassandra my id, kassandra wifi, kassandra, kassandra hd production, KASSANDRA, KASSANDRA HD PRODUCTION">
@@ -242,13 +249,13 @@ $format = "F"."00".$tambah;
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="nama" name="nama" placeholder="name@example.com" autocomplete="off" required>
+                                    <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $data_cek['nama']; ?>" readonly required>
                                     <label for="nama">Nama Lengkap</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="number" class="form-control" id="no_hp" name="no_hp" placeholder="No HP / WA" value="62" autocomplete="off" required>
+                                    <input type="number" class="form-control" id="no_hp" name="no_hp" placeholder="No HP / WA" value="<?php echo $data_cek['no_hp']; ?>" autocomplete="off" required>
                                     <label for="no_hp">Nomor HP / WA</label>
                                 </div>
                             </div>
@@ -272,7 +279,7 @@ $format = "F"."00".$tambah;
                             <div class="col-12">
                                 <div class="form-floating">
                                     <textarea type="text" style="height: 100pt;" class="form-control" id="feedback" name="feedback" placeholder="Tuliskan apa yang sudah baik dan perlu ditingkatkan lagi" required></textarea>
-                                    <label for="feedback">Tuliskan apa yang sudah baik dan perlu ditingkatkan lagi</label>
+                                    <label for="feedback">Tuliskan pengalaman terbaik anda dengan layanan kami</label>
                                 </div>
                             </div>
                             
@@ -409,7 +416,7 @@ $format = "F"."00".$tambah;
       Swal.fire({title: 'Terima kasih, masukkan anda sudah kami terima dan akan kami baca demi meningkatkan pelayanan hotspot KassandraWiFi',text: '',icon: 'success',confirmButtonText: 'OKE'
       }).then((result) => {
           if (result.value) {
-              window.location = 'feedback.php';
+              window.location = 'feedback_p.php?id=".$_POST['no_hp']."';
           }
       })</script>";
 
@@ -444,7 +451,7 @@ $format = "F"."00".$tambah;
       Swal.fire({title: 'Anda gagal menulis feedback ! pastikan semua data sudah benar..',text: '',icon: 'error',confirmButtonText: 'OKE'
       }).then((result) => {
           if (result.value) {
-              window.location = 'feedback.php';
+              window.location = 'feedback_p.php?id=".$_POST['no_hp']."';
           }
       })</script>";
     }
